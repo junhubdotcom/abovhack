@@ -1,4 +1,7 @@
+import 'package:abovhack/SocialMedia/Customise%20Widget/listOfInterest.dart';
+import 'package:abovhack/SocialMediaHomePage.dart';
 import 'package:flutter/material.dart';
+
 
 class InterestsPage extends StatelessWidget {
   const InterestsPage({Key? key});
@@ -41,64 +44,16 @@ class InterestsPage extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          
-                            ElevatedButton(
-                              onPressed: () {},
-                              child: Text("Income", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                             style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                            ),
-                          
-                          
-                             ElevatedButton(
-                              onPressed: () {},
-                              child: Text("Expenses", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                            ),
-                         
-                          
-                           ElevatedButton(
-                              onPressed: () {},
-                              child: Text("Assets", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                            ),
-                         
-                          
-                            ElevatedButton(
-                              onPressed: () {},
-                              child: Text("Liabilities", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                            ),
-                          
+                            InterestButton(interestName: "Income"),
+                            InterestButton(interestName: "Expenses"),
+                            InterestButton(interestName: "Assets"),
+                            InterestButton(interestName: "Liabilities"), 
                         ],
                       ),
                       Row(
                         children: [
-                          
-                             ElevatedButton(
-                              onPressed: () {},
-                              child: Text("Budgeting", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                            ),
-                       
-                          
-                            ElevatedButton(
-                              onPressed: () {},
-                              child: Text("Cash Flow Management", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                             style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                            ),
-                          
+                            InterestButton(interestName: "Budgeting"), 
+                            InterestButton(interestName: "Cash Flow Management"), 
                         ],
                       ),
                     ],
@@ -111,57 +66,19 @@ class InterestsPage extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          
-                            ElevatedButton(
-                              onPressed: () {},
-                              child: Text("Creating Budget", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                             
-                            ),
-                          
-                          
-                            ElevatedButton(
-                              onPressed: () {},
-                              child: Text("Tracking Expenses", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                            ),
-                            
-                 
+                            InterestButton(interestName: "Creating Budget"), 
+                            InterestButton(interestName: "Tracking Expenses"), 
                         ],
                       ),
                       Row(
                         children: [
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text("Paying Off Debt", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-
-                          ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text("Setting Financial Goals", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                          ),
+                          InterestButton(interestName: "Paying Off Debt"), 
+                          InterestButton(interestName: "Setting Financial Goals"), 
                         ],
                       ),
                       Row(
                         children: [
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text("Saving Money", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                          ),
-                          
+                          InterestButton(interestName: "Saving Money"), 
                         ],
                       ),
                     ],
@@ -174,73 +91,22 @@ class InterestsPage extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text("Stocks", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                          ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text("Bonds", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                          ),
-                          
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text("Mutual Funds", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                          ),
-                          
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text("Real Estate", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                          ),
+                          InterestButton(interestName: "Stocks"), 
+                          InterestButton(interestName: "Bonds"),
+                          InterestButton(interestName: "Mutual Funds"),
+                          InterestButton(interestName: "Real Estate"),
                         ],
                       ),
                       Row(
                         children: [
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text("Retirement Accounts", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                          ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text("Risk and Return", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                          ),
-                          
+                          InterestButton(interestName: "Retirement Accounts"),
+                          InterestButton(interestName: "Risk and Return"),   
                         ],
                       ),
                       Row(
                         children: [
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text("Diversification", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                          ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text("Investment Strategies", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                          ),
+                          InterestButton(interestName: "Diversification"),
+                          InterestButton(interestName: "Investment Strategies"),
                         ],
                       ),
                     ],
@@ -253,54 +119,19 @@ class InterestsPage extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text("Health Insurance", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                          ),
-                          ElevatedButton(
-                            onPressed: () {},
-                           child: Text("Life Insurance", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                          ),
-                          
+                          InterestButton(interestName: "Health Insurance"),
+                          InterestButton(interestName: "Life Insurance"),
                         ],
                       ),
                       Row(
                         children: [
-                        ElevatedButton(
-                            onPressed: () {},
-                            child: Text("Auto Insurance", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                          ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text("Homeowners' Insurance", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                          ),
-                        
-                          
+                          InterestButton(interestName: "Auto Insurance"),
+                          InterestButton(interestName: "Homeowners' Insurance"),
                         ],
                       ),
                       Row(
                         children: [
-                          
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text("Insurance in Risk Management", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                          ),
-                          
+                          InterestButton(interestName: "Insurance in Risk Management"),   
                         ],
                       ),
                     ],
@@ -313,38 +144,14 @@ class InterestsPage extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          ElevatedButton(
-                            onPressed: () {},
-                           child: Text("Filing Taxes", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                          ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text("Deductions", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                          ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text("Credits", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                          ),
+                          InterestButton(interestName: "Filing Taxes"),
+                          InterestButton(interestName: "Deductions"),
+                          InterestButton(interestName: "Credits"),
                         ],
                       ),
                       Row(
                         children: [
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text("Taxes Impact on Personal Finances", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                          ),
+                          InterestButton(interestName: "Taxes Impact on Personal Finances"),
                         ],
                       ),
                     ],
@@ -357,25 +164,16 @@ class InterestsPage extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text("Online Banking", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                          ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text("Mobile Payment App", style: TextStyle(fontWeight:FontWeight.normal, fontSize: 15.0,color: Colors.black),),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.only(left:10.0,right:10.0),
-                              ),
-                          ),
-                        ],
-                      ),
+                          InterestButton(interestName: "Online Banking"),
+                         InterestButton(interestName: "Mobile Payment Apps"),  
+                    ],),
                       SizedBox(height: 50),
                       ElevatedButton(
-                      onPressed: (){}, 
+                      onPressed: (){
+                         Navigator.push(
+                           context,MaterialPageRoute(builder: ((context) => SocialMediaHomePage())),
+                          );
+                      }, 
                       child: Text("Continue", style: TextStyle(color: Colors.black,fontSize:18.0),),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Color(0xff7ecfe0),
@@ -394,4 +192,7 @@ class InterestsPage extends StatelessWidget {
       ),
     );
   }
+  
+
+
 }
