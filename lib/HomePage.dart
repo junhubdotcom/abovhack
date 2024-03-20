@@ -1,5 +1,6 @@
 import 'package:abovhack/SocialMedia/InterestsPage.dart';
 import 'package:abovhack/Account/UserInfo.dart';
+import 'package:abovhack/FinancialCalendarPage.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -18,6 +19,16 @@ HomePage({super.key});
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => InterestsPage()),
+                );
+              },
+            ),
+            SizedBox(height: 16),
+            ElevatedButton(
+              child: Text('Calendar'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Container(child: FinancialCalendarPage())),
                 );
               },
             ),
