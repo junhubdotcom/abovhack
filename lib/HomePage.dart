@@ -1,5 +1,6 @@
 import 'package:abovhack/SocialMedia/InterestsPage.dart';
 import 'package:abovhack/Account/UserInfo.dart';
+import 'package:abovhack/Account/CreateFund.dart';
 import 'package:abovhack/FinancialCalendarPage.dart';
 import 'package:flutter/material.dart';
 
@@ -39,6 +40,16 @@ HomePage({super.key});
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => Container(child: UserInfo())),
+                );
+              },
+            ),
+            SizedBox(height: 16),
+            ElevatedButton(
+              child: Text('Fund'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Container(child: CreateFund())),
                 );
               },
             ),

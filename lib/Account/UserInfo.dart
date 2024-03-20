@@ -352,10 +352,7 @@ class UserInfoState extends State<UserInfo> {
                   )
                 ),
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Container(child: UserInfo())),
-                  );
+                  // Navigate to the next screen
                 },
               )
             ],
