@@ -2,6 +2,9 @@ import 'package:abovhack/Account/AccountSummary.dart';
 import 'package:abovhack/Education/screens/education_home.dart';
 import 'package:abovhack/SocialMedia/InterestsPage.dart';
 import 'package:flutter/material.dart';
+import 'package:abovhack/Account/CreateFund.dart';
+import 'package:abovhack/Account/UserInfo.dart';
+import 'package:abovhack/FinancialCalendar/FinancialCalendarPage.dart';
 
 class HomePage extends StatelessWidget {
 HomePage({super.key});

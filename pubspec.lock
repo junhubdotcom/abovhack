@@ -37,10 +37,10 @@ packages:
     dependency: transitive
     description:
       name: camera_avfoundation
-      sha256: "608b56b0880722f703871329c4d7d4c2f379c8e2936940851df7fc041abc6f51"
+      sha256: "8b113e43ee4434c9244c03c905432a0d5956cedaded3cd7381abaab89ce50297"
       url: "https://pub.dev"
     source: hosted
-    version: "0.9.13+10"
+    version: "0.9.14+1"
   camera_platform_interface:
     dependency: transitive
     description:
@@ -85,10 +85,10 @@ packages:
     dependency: transitive
     description:
       name: cross_file
-      sha256: fedaadfa3a6996f75211d835aaeb8fede285dae94262485698afd832371b9a5e
+      sha256: "55d7b444feb71301ef6b8838dbc1ae02e63dd48c8773f3810ff53bb1e2945b32"
       url: "https://pub.dev"
     source: hosted
-    version: "0.3.3+8"
+    version: "0.3.4+1"
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -144,6 +144,22 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  google_mlkit_commons:
+    dependency: transitive
+    description:
+      name: google_mlkit_commons
+      sha256: af63771903947d5523d9e991a939a4b8bf994f11661c9b9c8a71d7d3997115f8
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.0"
+  google_mlkit_text_recognition:
+    dependency: "direct main"
+    description:
+      name: google_mlkit_text_recognition
+      sha256: "21ea92590e1d8a46ca5aa123f487a6b07bbb0c903b88f1df633d6be26a42ee80"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.4.0"
   leak_tracker:
     dependency: transitive
     description:
@@ -168,29 +184,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.1"
-=======
-  flutter_web_plugins:
-    dependency: transitive
-    description: flutter
-    source: sdk
-    version: "0.0.0"
-  google_mlkit_commons:
-    dependency: transitive
-    description:
-      name: google_mlkit_commons
-      sha256: af63771903947d5523d9e991a939a4b8bf994f11661c9b9c8a71d7d3997115f8
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.2.0"
-  google_mlkit_text_recognition:
-    dependency: "direct main"
-    description:
-      name: google_mlkit_text_recognition
-      sha256: "21ea92590e1d8a46ca5aa123f487a6b07bbb0c903b88f1df633d6be26a42ee80"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.4.0"
->>>>>>> Stashed changes
   lints:
     dependency: transitive
     description:
@@ -238,10 +231,7 @@ packages:
       sha256: "087ce49c3f0dc39180befefc60fdb4acd8f8620e5682fe2476afd0b3688bb4af"
       url: "https://pub.dev"
     source: hosted
-<<<<<<< Updated upstream
     version: "1.9.0"
-=======
-    version: "1.8.3"
   permission_handler:
     dependency: "direct main"
     description:
@@ -290,7 +280,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.8"
->>>>>>> Stashed changes
   sky_engine:
     dependency: transitive
     description: flutter
@@ -368,6 +357,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "13.0.0"
+  web:
+    dependency: transitive
+    description:
+      name: web
+      sha256: "97da13628db363c635202ad97068d47c5b8aa555808e7a9411963c533b449b27"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.5.1"
 sdks:
-  dart: ">=3.2.3 <4.0.0"
-  flutter: ">=3.13.0"
+  dart: ">=3.3.0 <4.0.0"
+  flutter: ">=3.16.6"
