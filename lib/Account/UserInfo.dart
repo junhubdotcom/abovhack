@@ -251,8 +251,7 @@ class UserInfoState extends State<UserInfo> {
                       style: TextStyle(
                         fontSize: 18, 
                         fontWeight: FontWeight.normal, 
-                        color: Color(0XFF14181B), 
-                        fontFamily: 'Readex Pro'
+                        color: Color(0XFF14181B)
                       ),
                     ),
                   ),
@@ -348,7 +347,6 @@ class UserInfoState extends State<UserInfo> {
                     fontSize: 16, 
                     fontWeight: FontWeight.bold, 
                     color: Color(0XFF14181B), 
-                    fontFamily: 'Readex Pro'
                   )
                 ),
                 onPressed: () {
