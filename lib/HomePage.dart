@@ -1,3 +1,4 @@
+import 'package:abovhack/Education/screens/education_home.dart';
 import 'package:abovhack/SocialMedia/InterestsPage.dart';
 import 'package:abovhack/Account/UserInfo.dart';
 import 'package:abovhack/Account/CreateFund.dart';
@@ -50,6 +51,16 @@ HomePage({super.key});
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => Container(child: CreateFund())),
+                );
+              },
+            ),
+            SizedBox(height: 16),
+            ElevatedButton(
+              child: Text('Education'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Container(child: EducationHome())),
                 );
               },
             ),
