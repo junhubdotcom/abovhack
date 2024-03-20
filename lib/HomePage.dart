@@ -1,3 +1,4 @@
+import 'package:abovhack/Account/AccountSummary.dart';
 import 'package:abovhack/Education/screens/education_home.dart';
 import 'package:abovhack/SocialMedia/InterestsPage.dart';
 import 'package:abovhack/Account/UserInfo.dart';
@@ -54,6 +55,13 @@ HomePage({super.key});
                 );
               },
             ),
+            SizedBox(height: 16),
+            ElevatedButton(
+              child: Text('Summary'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Container(child: AccountSummary())),
             SizedBox(height: 16),
             ElevatedButton(
               child: Text('Education'),
