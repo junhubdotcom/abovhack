@@ -1,3 +1,4 @@
+import 'package:abovhack/FinancialCalendarPage.dart';
 import 'package:abovhack/HomePage.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +30,11 @@ class SocialMediaHomePage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(bottom :10.0,),
               child: IconButton(
-                onPressed: (){}, 
+                onPressed: (){
+                  Navigator.push(
+                    context,MaterialPageRoute(builder: ((context) => FinancialCalendarPage())),
+                  );
+                }, 
                 icon:Icon(Icons.video_collection, size:40.0, color:Color(0xffff9973))),
             ),
             Padding(
