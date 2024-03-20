@@ -83,6 +83,11 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_web_plugins:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
   leak_tracker:
     dependency: transitive
     description:
@@ -139,6 +144,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.11.0"
+  multi_chip_picker:
+    dependency: "direct main"
+    description:
+      name: multi_chip_picker
+      sha256: "4c5e2393ef543d868072ddde9e919566d978585ccc3b6f809c0cd0e195be9296"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.4"
   path:
     dependency: transitive
     description:
@@ -147,6 +160,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.9.0"
+  plugin_platform_interface:
+    dependency: transitive
+    description:
+      name: plugin_platform_interface
+      sha256: "4820fbfdb9478b1ebae27888254d445073732dae3d6ea81f0b7e06d5dedc3f02"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.8"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -218,3 +239,4 @@ packages:
     version: "13.0.0"
 sdks:
   dart: ">=3.2.3 <4.0.0"
+  flutter: ">=2.5.0"

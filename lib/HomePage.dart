@@ -27,7 +27,7 @@ HomePage({super.key});
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => UserInfoWidget()),
+                  MaterialPageRoute(builder: (context) => Container(child: UserInfo())),
                 );
               },
             ),
