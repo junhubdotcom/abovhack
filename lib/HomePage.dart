@@ -62,6 +62,9 @@ HomePage({super.key});
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => Container(child: AccountSummary())),
+                 );
+              },
+            ),
             SizedBox(height: 16),
             ElevatedButton(
               child: Text('Education'),
