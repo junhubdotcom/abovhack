@@ -1,4 +1,5 @@
 import 'package:abovhack/Account/AccountSummary.dart';
+import 'package:abovhack/Account/ListOfFund.dart';
 import 'package:abovhack/Camera/CameraPage.dart';
 import 'package:abovhack/Education/screens/education_home.dart';
 import 'package:abovhack/SocialMedia/InterestsPage.dart';
@@ -86,6 +87,16 @@ HomePage({super.key});
                 );
               },
             ),
+            SizedBox(height: 16),
+            ElevatedButton(
+              child: Text('List of Funds'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Container(child: ListOfFund())),
+                );
+              },
+            )
           ],
         ),
       ),
