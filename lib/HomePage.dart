@@ -1,4 +1,5 @@
 import 'package:abovhack/Account/AccountSummary.dart';
+import 'package:abovhack/Camera/CameraPage.dart';
 import 'package:abovhack/Education/screens/education_home.dart';
 import 'package:abovhack/SocialMedia/InterestsPage.dart';
 import 'package:flutter/material.dart';
@@ -72,6 +73,16 @@ HomePage({super.key});
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => Container(child: EducationHome())),
+                );
+              },
+            ),
+            SizedBox(height: 16),
+            ElevatedButton(
+              child: Text('Camera'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Container(child: CameraPage())),
                 );
               },
             ),
