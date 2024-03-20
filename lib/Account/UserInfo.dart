@@ -157,7 +157,7 @@ class UserInfoState extends State<UserInfo> {
                   ),
                   Center(
                     child: Container(
-                      width: 240,
+                      width: 270,
                       height: 45,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
