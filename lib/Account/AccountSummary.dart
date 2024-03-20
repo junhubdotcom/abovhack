@@ -213,6 +213,7 @@ class AccountSummaryState extends State<AccountSummary> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
                                 'Deposit',
@@ -259,6 +260,7 @@ class AccountSummaryState extends State<AccountSummary> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
                                 'Deposit',
@@ -305,6 +307,7 @@ class AccountSummaryState extends State<AccountSummary> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
                                 'Cash Out',
@@ -351,6 +354,7 @@ class AccountSummaryState extends State<AccountSummary> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
                                 'Deposit',
