@@ -1,7 +1,6 @@
-import 'package:abovhack/FinancialCalendar/FinancialCalendarPage.dart';
+import 'package:abovhack/Account/AccountSummary.dart';
+import 'package:abovhack/Education/screens/education_home.dart';
 import 'package:abovhack/SocialMedia/InterestsPage.dart';
-import 'package:abovhack/Account/UserInfo.dart';
-import 'package:abovhack/Camera/CameraPage.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -25,11 +24,51 @@ HomePage({super.key});
             ),
             SizedBox(height: 16),
             ElevatedButton(
+              child: Text('Calendar'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Container(child: FinancialCalendarPage())),
+                );
+              },
+            ),
+            SizedBox(height: 16),
+            ElevatedButton(
               child: Text('Account'),
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => UserInfoWidget()),
+                  MaterialPageRoute(builder: (context) => Container(child: UserInfo())),
+                );
+              },
+            ),
+            SizedBox(height: 16),
+            ElevatedButton(
+              child: Text('Fund'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Container(child: CreateFund())),
+                );
+              },
+            ),
+            SizedBox(height: 16),
+            ElevatedButton(
+              child: Text('Summary'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Container(child: AccountSummary())),
+                 );
+              },
+            ),
+            SizedBox(height: 16),
+            ElevatedButton(
+              child: Text('Education'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Container(child: EducationHome())),
                 );
               },
             ),
