@@ -1,5 +1,5 @@
 import 'package:abovhack/SocialMedia/InterestsPage.dart';
-import 'package:abovhack/Account/AccountPage.dart';
+import 'package:abovhack/Account/UserInfo.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -27,7 +27,7 @@ HomePage({super.key});
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => AccountPage()),
+                  MaterialPageRoute(builder: (context) => UserInfoWidget()),
                 );
               },
             ),

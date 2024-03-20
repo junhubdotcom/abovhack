@@ -1,5 +1,5 @@
 import 'package:abovhack/SocialMedia/Customise%20Widget/listOfInterest.dart';
-import 'package:abovhack/SocialMediaHomePage.dart';
+import 'package:abovhack/SocialMedia/SocialMediaHomePage.dart';
 import 'package:flutter/material.dart';
 
 
