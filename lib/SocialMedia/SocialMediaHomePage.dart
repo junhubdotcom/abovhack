@@ -3,6 +3,8 @@ import 'package:abovhack/SocialMedia/Community.dart';
 import 'package:abovhack/SocialMedia/PostingPage.dart';
 import 'package:abovhack/SocialMedia/ProfilePage.dart';
 import 'package:abovhack/SocialMedia/ShortVideo.dart';
+import 'package:abovhack/FinancialCalendar/FinancialCalendarPage.dart';
+import 'package:abovhack/HomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
 
@@ -13,6 +15,7 @@ class SocialMediaHomePage extends StatelessWidget {
       "Key Principles for Building Your Investment Portfolio: \n\n 1.Define Objectives: Clearly outline your investment goals, such as retirement savings or wealth growth, to guide your decisions.\n2.Diversification: Spread risk by investing across different asset classes like stocks, bonds, and real estate.\n3.Risk Assessment: Understand your tolerance for market fluctuations to create a balanced portfolio.\n4.Asset Allocation: Decide on the mix of assets based on your goals, timeframe, and risk tolerance.\n5.Monitor and Rebalance: Regularly review your portfolio and adjust to maintain your desired asset allocation.\n6.Cost Management: Minimize fees and expenses to maximize returns over time.\n7.Tax Efficiency: Consider tax implications and employ strategies to minimize taxes on investments.\n8.Stay Informed and Disciplined: Stay updated on market trends, but avoid emotional decisions and stick to your long-term plan.";
   final String content2 =
       "Crafting a budget is a fundamental step towards enhancing financial skills and achieving financial stability. A well-designed budget serves as a roadmap, providing insights into income, expenses, and savings goals. Begin by listing all sources of income and categorizing expenses, including essentials like housing, utilities, groceries, and discretionary spending. Analyze past spending patterns to identify areas for potential savings and prioritize financial goals such as building an emergency fund, paying off debt, or investing for the future. Regularly tracking expenses and adjusting the budget as needed ensures accountability and helps maintain financial discipline. Embracing budgeting tools and apps can streamline the process and provide valuable insights into spending habits. Ultimately, mastering the art of budgeting empowers individuals to take control of their finances and work towards long-term financial success.";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -457,3 +460,4 @@ class SocialMediaHomePage extends StatelessWidget {
     );
   }
 }
+
