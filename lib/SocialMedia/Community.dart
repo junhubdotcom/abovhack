@@ -1,4 +1,3 @@
-import 'package:abovhack/HomePage.dart';
 import 'package:abovhack/SocialMedia/ChatPage.dart';
 import 'package:abovhack/SocialMedia/CommunityProfilePage.dart';
 import 'package:abovhack/SocialMedia/PostingPage.dart';
@@ -7,6 +6,7 @@ import 'package:abovhack/SocialMedia/ShortVideo.dart';
 import 'package:abovhack/SocialMedia/SocialMediaHomePage.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class CommunityPage extends StatefulWidget {
   CommunityPage({Key? key}) : super(key: key);
   List<String> postTitle = [

@@ -3,8 +3,6 @@ import 'package:abovhack/SocialMedia/Community.dart';
 import 'package:abovhack/SocialMedia/PostingPage.dart';
 import 'package:abovhack/SocialMedia/ProfilePage.dart';
 import 'package:abovhack/SocialMedia/ShortVideo.dart';
-import 'package:abovhack/FinancialCalendar/FinancialCalendarPage.dart';
-import 'package:abovhack/HomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
 

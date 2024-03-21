@@ -1,4 +1,3 @@
-import 'package:abovhack/HomePage.dart';
 import 'package:abovhack/SocialMedia/ChatDetailsPage.dart';
 import 'package:abovhack/SocialMedia/Community.dart';
 import 'package:abovhack/SocialMedia/PostingPage.dart';
@@ -8,7 +7,7 @@ import 'package:abovhack/SocialMedia/SocialMediaHomePage.dart';
 import 'package:flutter/material.dart';
 
 class ChatPage extends StatelessWidget {
-  ChatPage({super.key});
+  const ChatPage({super.key});
 
   @override
   Widget build(BuildContext context) {
