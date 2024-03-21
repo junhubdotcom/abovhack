@@ -107,7 +107,7 @@ class _ShortVideoPageState extends State<ShortVideoPage> {
           ),
           IconButton(
             icon: Icon(Icons.video_collection,
-                size: 35.0, color: Color(0XFFFF9973)),
+                size: 35.0, color: Color(0xffC4B2AE)),
             onPressed: () {
               Navigator.push(
                 context,

@@ -87,7 +87,7 @@ class _CommunityPageState extends State<CommunityPage> {
             },
           ),
           IconButton(
-            icon: Icon(Icons.people, size: 35.0, color: Color(0XFFFF9973)),
+            icon: Icon(Icons.people, size: 35.0, color: Color(0XFFC4B2AE)),
             onPressed: () {
               Navigator.push(
                 context,

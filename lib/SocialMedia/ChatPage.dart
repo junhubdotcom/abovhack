@@ -48,7 +48,7 @@ class ChatPage extends StatelessWidget {
             },
           ),
           IconButton(
-            icon: Icon(Icons.chat, size: 35.0, color: Color(0XFFFF9973)),
+            icon: Icon(Icons.chat, size: 35.0, color: Color(0XFFC4B2AE)),
             onPressed: () {
               Navigator.push(
                 context,

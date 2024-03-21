@@ -32,7 +32,7 @@ class SocialMediaHomePage extends StatelessWidget {
             },
           ),
           IconButton(
-            icon: Icon(Icons.article, size: 35.0, color: Color(0XFFFF9973)),
+            icon: Icon(Icons.article, size: 35.0, color: Color(0xffC4B2AE)),
             onPressed: () {
               Navigator.push(
                 context,
