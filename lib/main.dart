@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'HomePage.dart' ;
+import 'HomePage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,12 +8,11 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title:'FInancial Literacy App' ,
-      debugShowCheckedModeBanner: false ,
+      title: 'Financial Literacy App',
+      debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
   }
