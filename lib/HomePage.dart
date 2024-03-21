@@ -1,5 +1,6 @@
 import 'package:abovhack/Account/AccountSummary.dart';
 import 'package:abovhack/Account/ListOfFund.dart';
+import 'package:abovhack/Account/SummaryPage.dart';
 import 'package:abovhack/Camera/CameraPage.dart';
 import 'package:abovhack/Education/screens/education_home.dart';
 import 'package:abovhack/SocialMedia/InterestsPage.dart';
@@ -94,6 +95,16 @@ HomePage({super.key});
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => Container(child: ListOfFund())),
+                );
+              },
+            ),
+            SizedBox(height: 16),
+            ElevatedButton(
+              child: Text('Suggestion'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Container(child: SummaryPage())),
                 );
               },
             )
