@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:abovhack/SocialMedia/SocialMediaHomePage.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'Financial Literacy App',
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: SocialMediaHomePage(),
     );
   }
 }
