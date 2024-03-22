@@ -19,23 +19,27 @@ class _EducationHomeState extends State<EducationHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: const Text(
-          'Finance App',
-        ),
-        actions: const [],
-        centerTitle: false,
-        elevation: 2,
-      ),
+      backgroundColor: Color(0xfffff3f3),
+      // appBar: AppBar(
+      //   automaticallyImplyLeading: false,
+      //   title: const Text(
+      //     'Finance App',
+      //   ),
+      //   actions: const [],
+      //   centerTitle: false,
+      //   elevation: 2,
+      // ),
       body: SafeArea(
         top: true,
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
-            ProfileSection(
-              xp: xp,
-              maxXp: maxXp,
+            Container(
+              color: Color(0xffff9973),
+              child: ProfileSection(
+                xp: xp,
+                maxXp: maxXp,
+              ),
             ),
             const Divider(
               thickness: 1,
@@ -76,7 +80,7 @@ class ProfileSection extends StatelessWidget {
               shape: BoxShape.circle,
             ),
             child: Image.network(
-              'https://picsum.photos/seed/714/600',
+              'https://storage.googleapis.com/pai-images/58286c435ac54f078f246c3e9cc14c1d.jpeg',
               fit: BoxFit.cover,
             ),
           ),
@@ -90,11 +94,11 @@ class ProfileSection extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
-                    'Ali bin Abu',
+                    'Michelle Teoh',
                     style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
                   ),
                   const SizedBox(
                     height: 10,
@@ -160,7 +164,7 @@ class TradeCard extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => TradePage(), 
+            builder: (context) => TradePage(),
           ),
         );
       },
@@ -345,8 +349,7 @@ class LearnSection extends StatelessWidget {
           child: Row(
             children: topics.map((topic) {
               return Padding(
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 8.0), 
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 child: TopicCard(topic: topic),
               );
             }).toList(),

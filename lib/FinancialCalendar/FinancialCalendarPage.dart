@@ -6,28 +6,12 @@ class FinancialCalendarPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Padding(
-              padding: EdgeInsets.only(),
-              child: Text(
-                'Financial Calendar',
-                style: TextStyle(
-                    fontSize: 30.0,
-                    color: Color(0XFFFF9973),
-                    fontWeight: FontWeight.bold),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(),
-              child: Icon(Icons.calendar_month,
-                  size: 35.0, color: Color(0XFFFF9973)),
-            ),
-          ],
-        ),
-      ),
+      // appBar: AppBar(
+      //   title: const Row(
+      //     mainAxisAlignment: MainAxisAlignment.spaceAround,
+      //     children: [],
+      //   ),
+      // ),
       body: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -103,7 +87,8 @@ class FinancialCalendarPage extends StatelessWidget {
                   child: Align(
                       alignment: const AlignmentDirectional(-1, 0),
                       child: (Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
                         child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -168,11 +153,9 @@ class FinancialCalendarPage extends StatelessWidget {
                                       fontSize: 16.0,
                                       color: Colors.red,
                                       fontWeight: FontWeight.bold)),
-                              
                             ]),
                       ))),
                 ),
-
                 Container(
                   width: double.infinity,
                   height: 100,
@@ -192,7 +175,8 @@ class FinancialCalendarPage extends StatelessWidget {
                   child: Align(
                       alignment: const AlignmentDirectional(-1, 0),
                       child: (Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
                         child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -257,11 +241,9 @@ class FinancialCalendarPage extends StatelessWidget {
                                       fontSize: 16.0,
                                       color: Colors.yellow[700],
                                       fontWeight: FontWeight.bold)),
-                              
                             ]),
                       ))),
                 ),
-
                 Container(
                   width: double.infinity,
                   height: 100,
@@ -281,7 +263,8 @@ class FinancialCalendarPage extends StatelessWidget {
                   child: Align(
                       alignment: const AlignmentDirectional(-1, 0),
                       child: (Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
                         child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -346,11 +329,9 @@ class FinancialCalendarPage extends StatelessWidget {
                                       fontSize: 16.0,
                                       color: Colors.red,
                                       fontWeight: FontWeight.bold)),
-                              
                             ]),
                       ))),
                 ),
-
                 Container(
                   width: double.infinity,
                   height: 100,
@@ -370,7 +351,8 @@ class FinancialCalendarPage extends StatelessWidget {
                   child: Align(
                       alignment: const AlignmentDirectional(-1, 0),
                       child: (Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
                         child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -435,11 +417,9 @@ class FinancialCalendarPage extends StatelessWidget {
                                       fontSize: 16.0,
                                       color: Colors.yellow[700],
                                       fontWeight: FontWeight.bold)),
-                              
                             ]),
                       ))),
                 ),
-
                 Container(
                   width: double.infinity,
                   height: 100,
@@ -459,7 +439,8 @@ class FinancialCalendarPage extends StatelessWidget {
                   child: Align(
                       alignment: const AlignmentDirectional(-1, 0),
                       child: (Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
                         child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -524,11 +505,9 @@ class FinancialCalendarPage extends StatelessWidget {
                                       fontSize: 16.0,
                                       color: Colors.yellow[700],
                                       fontWeight: FontWeight.bold)),
-                              
                             ]),
                       ))),
                 ),
-
                 Container(
                   width: double.infinity,
                   height: 100,
@@ -548,7 +527,8 @@ class FinancialCalendarPage extends StatelessWidget {
                   child: Align(
                       alignment: const AlignmentDirectional(-1, 0),
                       child: (Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
                         child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -613,11 +593,9 @@ class FinancialCalendarPage extends StatelessWidget {
                                       fontSize: 16.0,
                                       color: Colors.yellow[700],
                                       fontWeight: FontWeight.bold)),
-                              
                             ]),
                       ))),
                 ),
-
                 Container(
                   width: double.infinity,
                   height: 100,
@@ -637,7 +615,8 @@ class FinancialCalendarPage extends StatelessWidget {
                   child: Align(
                       alignment: const AlignmentDirectional(-1, 0),
                       child: (Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
                         child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -702,71 +681,13 @@ class FinancialCalendarPage extends StatelessWidget {
                                       fontSize: 16.0,
                                       color: Colors.yellow[700],
                                       fontWeight: FontWeight.bold)),
-                              
                             ]),
                       ))),
                 ),
-                
               ],
             )),
           ),
         ],
-      ),
-      bottomNavigationBar: BottomAppBar(
-        notchMargin: 10.0,
-        shape: const CircularNotchedRectangle(),
-        color: Colors.white,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(
-                bottom: 10.0,
-              ),
-              child: IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.calendar_month,
-                      size: 40.0, color: Color(0xffff9973))),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 10.0, right: 20.0),
-              child: IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.chat, size: 40.0, color: Color(0xffff9973))),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 10.0, left: 20.0),
-              child: IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.account_balance_wallet,
-                    size: 40,
-                    color: Color(0xffff9973),
-                  )),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                bottom: 10.0,
-              ),
-              child: IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.legend_toggle_rounded,
-                    size: 40,
-                    color: Color(0xffff9973),
-                  )),
-            ),
-          ],
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: const Icon(Icons.document_scanner),
-        backgroundColor: const Color(0xffff9973),
-        foregroundColor: Colors.white,
-        shape: const CircleBorder(),
       ),
     );
   }
