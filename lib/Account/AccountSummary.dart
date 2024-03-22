@@ -1,3 +1,7 @@
+import 'package:abovhack/Account/ListOfFund.dart';
+import 'package:abovhack/Account/SummaryPage.dart';
+import 'package:abovhack/Camera/CameraPage.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class AccountSummary extends StatefulWidget {
@@ -11,56 +15,6 @@ class AccountSummaryState extends State<AccountSummary> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color(0xff4e4745),
-        leading: Container(
-          alignment: Alignment.centerLeft,
-          padding: EdgeInsets.only(left: 10.0),
-          child: Stack(
-            children: [
-              CircleAvatar(
-                backgroundImage: NetworkImage(
-                    'https://storage.googleapis.com/pai-images/58286c435ac54f078f246c3e9cc14c1d.jpeg'),
-                radius: 23.0,
-              ),
-            ],
-          ),
-        ),
-        title: Container(
-          height: 40.0,
-          child: TextField(
-            decoration: InputDecoration(
-              fillColor: Color(0xff9c8e8b),
-              border: OutlineInputBorder(
-                borderSide: BorderSide(
-                  color: Colors.white,
-                ),
-              ),
-              hintText: "Search",
-              hintStyle: TextStyle(color: Colors.white),
-              prefixIcon: Icon(
-                Icons.search,
-                color: Colors.white,
-              ),
-              contentPadding: EdgeInsets.all(10.0),
-            ),
-          ),
-        ),
-        actions: [
-          Container(
-            alignment: Alignment.centerRight,
-            padding: EdgeInsets.only(right: 10.0),
-            child: IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.chat,
-                size: 35.0,
-                color: Colors.white,
-              ),
-            ),
-          ),
-        ],
-      ),
       body: Column(
         children: [
           Container(
@@ -69,21 +23,42 @@ class AccountSummaryState extends State<AccountSummary> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: ((context) => ListOfFund())),
+                    );
+                  },
                   icon: Icon(Icons.monetization_on_rounded,
                       color: Colors.white, size: 30.0),
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: ((context) => AccountSummary())),
+                    );
+                  },
                   icon:
                       Icon(Icons.account_box, color: Colors.white, size: 30.0),
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: ((context) => SummaryPage())),
+                    );
+                  },
                   icon: Icon(Icons.bar_chart, color: Colors.white, size: 30.0),
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: ((context) => CameraPage())),
+                    );
+                  },
                   icon: Icon(Icons.camera, color: Colors.white, size: 30.0),
                 ),
               ],
@@ -426,33 +401,6 @@ class AccountSummaryState extends State<AccountSummary> {
                     ])
                   ]),
             ),
-          ),
-        ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: Color(0xff4e4745),
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.white,
-        selectedLabelStyle: TextStyle(color: Colors.white),
-        unselectedLabelStyle: TextStyle(color: Colors.white),
-        iconSize: 30.0,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.book),
-            label: 'Education',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.account_balance_wallet),
-            label: 'Account',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_month),
-            label: 'Calendar',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.mark_chat_unread),
-            label: 'Social Media',
           ),
         ],
       ),
