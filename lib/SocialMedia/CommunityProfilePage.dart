@@ -1,6 +1,4 @@
-import 'package:abovhack/SocialMedia/ProfilePage.dart';
 import 'package:flutter/material.dart';
-import 'package:abovhack/SocialMedia/PostingPage.dart';
 
 class CommunityProfilePage extends StatelessWidget {
   const CommunityProfilePage({super.key});

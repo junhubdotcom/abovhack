@@ -1,8 +1,3 @@
-import 'package:abovhack/SocialMedia/ChatPage.dart';
-import 'package:abovhack/SocialMedia/Community.dart';
-import 'package:abovhack/SocialMedia/PostingPage.dart';
-import 'package:abovhack/SocialMedia/ProfilePage.dart';
-import 'package:abovhack/SocialMedia/SocialMediaHomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:card_swiper/card_swiper.dart';
 
