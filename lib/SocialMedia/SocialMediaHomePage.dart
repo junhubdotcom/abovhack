@@ -1,3 +1,6 @@
+import 'package:abovhack/Account/AccountSummary.dart';
+import 'package:abovhack/Education/screens/education_home.dart';
+import 'package:abovhack/FinancialCalendar/FinancialCalendarPage.dart';
 import 'package:abovhack/SocialMedia/ChatPage.dart';
 import 'package:abovhack/SocialMedia/Community.dart';
 import 'package:abovhack/SocialMedia/PostingPage.dart';
@@ -19,6 +22,14 @@ class _SocialMediaHomePageState extends State<SocialMediaHomePage> {
 
   final String content2 =
       "Crafting a budget is a fundamental step towards enhancing financial skills and achieving financial stability. A well-designed budget serves as a roadmap, providing insights into income, expenses, and savings goals. Begin by listing all sources of income and categorizing expenses, including essentials like housing, utilities, groceries, and discretionary spending. Analyze past spending patterns to identify areas for potential savings and prioritize financial goals such as building an emergency fund, paying off debt, or investing for the future. Regularly tracking expenses and adjusting the budget as needed ensures accountability and helps maintain financial discipline. Embracing budgeting tools and apps can streamline the process and provide valuable insights into spending habits. Ultimately, mastering the art of budgeting empowers individuals to take control of their finances and work towards long-term financial success.";
+
+  int _currentIndex = 0;
+  final List<Widget> _pages = [
+    EducationHome(),
+    AccountSummary(),
+    FinancialCalendarPage(),
+    SocialMediaHomePage(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +74,12 @@ class _SocialMediaHomePageState extends State<SocialMediaHomePage> {
             alignment: Alignment.centerRight,
             padding: EdgeInsets.only(right: 10.0),
             child: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: ((context) => ChatPage())),
+                );
+              },
               icon: Icon(
                 Icons.chat,
                 size: 35.0,
@@ -81,25 +97,53 @@ class _SocialMediaHomePageState extends State<SocialMediaHomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: ((context) => PostingPage())),
+                    );
+                  },
                   icon: Icon(Icons.add_to_photos,
                       color: Colors.white, size: 30.0),
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: ((context) => SocialMediaHomePage())),
+                    );
+                  },
                   icon: Icon(Icons.article, color: Colors.white, size: 30.0),
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: ((context) => CommunityPage())),
+                    );
+                  },
                   icon: Icon(Icons.people, color: Colors.white, size: 30.0),
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: ((context) => ShortVideoPage())),
+                    );
+                  },
                   icon: Icon(Icons.video_collection,
                       color: Colors.white, size: 30.0),
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: ((context) => ProfilePage())),
+                    );
+                  },
                   icon: Icon(Icons.person, color: Colors.white, size: 30.0),
                 ),
               ],
@@ -455,6 +499,12 @@ class _SocialMediaHomePageState extends State<SocialMediaHomePage> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentIndex,
+        onTap: (index) {
+          setState(() {
+            _currentIndex = index;
+          });
+        },
         type: BottomNavigationBarType.fixed,
         backgroundColor: Color(0xff4e4745),
         selectedItemColor: Colors.white,
