@@ -1,6 +1,7 @@
 import 'package:abovhack/Account/CreateFund.dart';
 import 'package:abovhack/Account/ListOfFund.dart';
 import 'package:abovhack/Account/SummaryPage.dart';
+import 'package:abovhack/Account/UserInfo.dart';
 import 'package:abovhack/Camera/CameraPage.dart';
 import 'package:abovhack/SocialMedia/InterestsPage.dart';
 import 'package:flutter/material.dart';
@@ -24,6 +25,7 @@ class HomePage extends StatefulWidget {
 
 class HomePageState extends State<HomePage> {
   bool isFirstView = true;
+
   int _selectedIndex = 0;
   final List<Widget> _pages = <Widget>[
     const SocialMediaHomePage(),
@@ -126,6 +128,14 @@ class HomePageState extends State<HomePage> {
                 selectedIndex: _selectedIndex,
                 onDestinationSelected: (int index) {
                   setState(() => _selectedIndex = index);
+                  if (_isFirst) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: ((context) => const UserInfo())),
+                    );
+                    _isFirst = false;
+                  }
                 },
                 indicatorColor: const Color(0XFFC4B2AE),
                 backgroundColor: const Color(0xff4e4745)),

@@ -268,7 +268,7 @@ class SummaryPageState extends State<SummaryPage> {
                                 )))),
                     Padding(
                         padding:
-                            const EdgeInsets.only(left: 16, right: 16, top: 12),
+                            const EdgeInsets.only(left: 16, right: 16, top: 12, bottom: 12),
                         child: Container(
                             width: double.infinity,
                             decoration: BoxDecoration(
@@ -302,7 +302,7 @@ class SummaryPageState extends State<SummaryPage> {
                                           'images/piechart.png',
                                           fit: BoxFit.cover,
                                         ),
-                                      )
+                                      ),
                                     ]))))
                   ])),
             ),
