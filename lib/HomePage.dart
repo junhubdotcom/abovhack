@@ -81,7 +81,7 @@ class HomePageState extends State<HomePage> {
                   label: 'Calendar',
                 ),
                 NavigationDestination(
-                  icon: Icon(Icons.mark_chat_unread, color: Colors.white),
+                  icon: Icon(Icons.chat_bubble_rounded, color: Colors.white),
                   label: 'Social Media',
                 )
               ],

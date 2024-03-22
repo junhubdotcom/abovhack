@@ -8,7 +8,6 @@ class FinancialCalendarPage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          const SizedBox(height: 60),
           Container(
             width: double.infinity,
             decoration: BoxDecoration(
