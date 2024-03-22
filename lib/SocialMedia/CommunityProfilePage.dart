@@ -3,32 +3,32 @@ import 'package:flutter/material.dart';
 import 'package:abovhack/SocialMedia/PostingPage.dart';
 
 class CommunityProfilePage extends StatelessWidget {
-  const CommunityProfilePage({Key? key});
+  const CommunityProfilePage({super.key});
   final String content =
       "Key Principles for Building Your Investment Portfolio: \n\n 1.Define Objectives: Clearly outline your investment goals, such as retirement savings or wealth growth, to guide your decisions.\n2.Diversification: Spread risk by investing across different asset classes like stocks, bonds, and real estate.\n3.Risk Assessment: Understand your tolerance for market fluctuations to create a balanced portfolio.\n4.Asset Allocation: Decide on the mix of assets based on your goals, timeframe, and risk tolerance.\n5.Monitor and Rebalance: Regularly review your portfolio and adjust to maintain your desired asset allocation.\n6.Cost Management: Minimize fees and expenses to maximize returns over time.\n7.Tax Efficiency: Consider tax implications and employ strategies to minimize taxes on investments.\n8.Stay Informed and Disciplined: Stay updated on market trends, but avoid emotional decisions and stick to your long-term plan.";
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      /*appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, size: 35.0, color: Color(0XFFFF9973)),
+          icon: const Icon(Icons.arrow_back, size: 35.0, color: Color(0XFFFF9973)),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
         actions: [
           IconButton(
-            icon: Icon(Icons.add, size: 35.0, color: Color(0XFFFF9973)),
+            icon: const Icon(Icons.add, size: 35.0, color: Color(0XFFFF9973)),
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: ((context) => PostingPage())),
+                MaterialPageRoute(builder: ((context) => const PostingPage())),
               );
             },
           ),
           IconButton(
-            icon: Icon(Icons.search, size: 35.0, color: Color(0XFFFF9973)),
+            icon: const Icon(Icons.search, size: 35.0, color: Color(0XFFFF9973)),
             onPressed: () {
               // Handle search button tap
             },
@@ -37,10 +37,10 @@ class CommunityProfilePage extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: ((context) => ProfilePage())),
+                MaterialPageRoute(builder: ((context) => const ProfilePage())),
               );
             },
-            child: Stack(
+            child: const Stack(
               children: [
                 CircleAvatar(
                   backgroundImage: NetworkImage(
@@ -59,13 +59,13 @@ class CommunityProfilePage extends StatelessWidget {
             ),
           ),
         ],
-      ),
+      ),*/
       body: SingleChildScrollView(
         child: Column(
           children: [
             //Community Profile
             Container(
-              color: Color(0xffff9973),
+              color: const Color(0xffff9973),
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Column(
@@ -73,7 +73,7 @@ class CommunityProfilePage extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Row(
+                        const Row(
                           children: [
                             CircleAvatar(
                               radius: 40.0,
@@ -92,19 +92,19 @@ class CommunityProfilePage extends StatelessWidget {
                         ),
                         ElevatedButton(
                           onPressed: () {},
-                          child: Text(
-                            "Join",
-                            style: TextStyle(color: Colors.black),
-                          ),
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.white,
-                            padding: EdgeInsets.all(0.0),
+                            padding: const EdgeInsets.all(0.0),
+                          ),
+                          child: const Text(
+                            "Join",
+                            style: TextStyle(color: Colors.black),
                           ),
                         ),
                       ],
                     ),
-                    SizedBox(height: 5.0),
-                    Text(
+                    const SizedBox(height: 5.0),
+                    const Text(
                       'Elevate your financial future with expert investment guidance and practical tips. Join us for informed decisions and success in the investment world!',
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
@@ -114,17 +114,17 @@ class CommunityProfilePage extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                       maxLines: 5,
                     ),
-                    SizedBox(height: 15.0),
+                    const SizedBox(height: 15.0),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         ElevatedButton.icon(
                           onPressed: () {},
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.people,
                             color: Color(0xffff9973),
                           ),
-                          label: Text(
+                          label: const Text(
                             "237 Members",
                             style: TextStyle(
                               color: Color(0xffff9973),
@@ -137,11 +137,11 @@ class CommunityProfilePage extends StatelessWidget {
                         ),
                         ElevatedButton.icon(
                           onPressed: () {},
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.chat,
                             color: Color(0xffff9973),
                           ),
-                          label: Text(
+                          label: const Text(
                             "Chatroom",
                             style: TextStyle(
                               color: Color(0xffff9973),
@@ -167,15 +167,15 @@ class CommunityProfilePage extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          CircleAvatar(
+                          const CircleAvatar(
                             backgroundImage: NetworkImage(
                                 'https://storage.googleapis.com/pai-images/58286c435ac54f078f246c3e9cc14c1d.jpeg'),
                           ),
-                          SizedBox(width: 10.0),
+                          const SizedBox(width: 10.0),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Row(
+                              const Row(
                                 children: [
                                   Text("Michelle Teoh",
                                       style: TextStyle(
@@ -188,14 +188,14 @@ class CommunityProfilePage extends StatelessWidget {
                                           fontSize: 8.0, color: Colors.grey)),
                                 ],
                               ),
-                              SizedBox(height: 3.0),
+                              const SizedBox(height: 3.0),
                               Container(
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10.0),
-                                  color: Color(0xffadd3ff),
+                                  color: const Color(0xffadd3ff),
                                 ),
-                                child: Padding(
-                                  padding: const EdgeInsets.only(
+                                child: const Padding(
+                                  padding: EdgeInsets.only(
                                       top: 2.0,
                                       bottom: 2.0,
                                       left: 8.0,
@@ -208,11 +208,18 @@ class CommunityProfilePage extends StatelessWidget {
                               ),
                             ],
                           ),
-                          Spacer(),
-                          Spacer(),
+                          const Spacer(),
+                          const Spacer(),
                           ElevatedButton(
                             onPressed: () {},
-                            child: Text(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: const Color(0xffd9d9d9),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20.0),
+                              ),
+                              padding: const EdgeInsets.all(0.0),
+                            ),
+                            child: const Text(
                               "Following",
                               style: TextStyle(
                                 fontSize: 11.0,
@@ -220,24 +227,17 @@ class CommunityProfilePage extends StatelessWidget {
                                 color: Colors.black,
                               ),
                             ),
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Color(0xffd9d9d9),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20.0),
-                              ),
-                              padding: EdgeInsets.all(0.0),
-                            ),
                           ),
                         ],
                       ),
-                      SizedBox(height: 10.0),
-                      Text(
+                      const SizedBox(height: 10.0),
+                      const Text(
                         "Investing with Confidence: Expert Tips and Strategies",
                         style: TextStyle(
                             fontSize: 25, fontWeight: FontWeight.bold),
                       ),
                       //videoPlayer(videoUrl: 'https://youtube.com/shorts/TOsOR48dQ78?si=iao5Bd8Y176eY7oi'),
-                      Stack(
+                      const Stack(
                         children: [
                           Image(
                               image: NetworkImage(
@@ -258,37 +258,37 @@ class CommunityProfilePage extends StatelessWidget {
                   Row(
                     children: [
                       IconButton(
-                        icon: Icon(Icons.favorite_border_outlined),
+                        icon: const Icon(Icons.favorite_border_outlined),
                         onPressed: () {},
                       ),
                       IconButton(
-                        icon: Icon(Icons.comment_outlined),
+                        icon: const Icon(Icons.comment_outlined),
                         onPressed: () {},
                       ),
                       IconButton(
-                        icon: Icon(Icons.star_border_outlined),
+                        icon: const Icon(Icons.star_border_outlined),
                         onPressed: () {},
                       ),
                       IconButton(
-                        icon: Icon(Icons.share),
+                        icon: const Icon(Icons.share),
                         onPressed: () {},
                       ),
                     ],
                   ),
-                  Divider(
+                  const Divider(
                     color: Colors.grey,
                   ),
                   Row(
                     children: [
-                      CircleAvatar(
+                      const CircleAvatar(
                         backgroundImage: NetworkImage(
                             'https://www.snapmindset.com/storage/2024/01/cropped-Mark-Tilbury.jpg'),
                       ),
-                      SizedBox(width: 10.0),
+                      const SizedBox(width: 10.0),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Row(
+                          const Row(
                             children: [
                               Text("Mark Tilbury",
                                   style:
@@ -302,14 +302,14 @@ class CommunityProfilePage extends StatelessWidget {
                                       fontSize: 8.0, color: Colors.grey)),
                             ],
                           ),
-                          SizedBox(height: 3.0),
+                          const SizedBox(height: 3.0),
                           Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10.0),
-                              color: Color(0xffadd3ff),
+                              color: const Color(0xffadd3ff),
                             ),
-                            child: Padding(
-                              padding: const EdgeInsets.only(
+                            child: const Padding(
+                              padding: EdgeInsets.only(
                                   top: 2.0, bottom: 2.0, left: 8.0, right: 8.0),
                               child: Text(
                                 "Investment Knowledge",
@@ -319,10 +319,17 @@ class CommunityProfilePage extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Spacer(),
+                      const Spacer(),
                       ElevatedButton(
                         onPressed: () {},
-                        child: Text(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xffd9d9d9),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                          padding: const EdgeInsets.all(0.0),
+                        ),
+                        child: const Text(
                           "Following",
                           style: TextStyle(
                             fontSize: 11.0,
@@ -330,23 +337,16 @@ class CommunityProfilePage extends StatelessWidget {
                             color: Colors.black,
                           ),
                         ),
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xffd9d9d9),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
-                          ),
-                          padding: EdgeInsets.all(0.0),
-                        ),
                       ),
                     ],
                   ),
-                  SizedBox(height: 10.0),
-                  Text(
+                  const SizedBox(height: 10.0),
+                  const Text(
                     "Explaining Investing In Plain English 📈 #investing #investingforbeginners #investing101",
                     style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                   ),
                   //videoPlayer(videoUrl: 'https://youtube.com/shorts/TOsOR48dQ78?si=iao5Bd8Y176eY7oi'),
-                  Stack(
+                  const Stack(
                     children: [
                       Image(
                           image: NetworkImage(
@@ -365,19 +365,19 @@ class CommunityProfilePage extends StatelessWidget {
                   Row(
                     children: [
                       IconButton(
-                        icon: Icon(Icons.favorite_border_outlined),
+                        icon: const Icon(Icons.favorite_border_outlined),
                         onPressed: () {},
                       ),
                       IconButton(
-                        icon: Icon(Icons.comment_outlined),
+                        icon: const Icon(Icons.comment_outlined),
                         onPressed: () {},
                       ),
                       IconButton(
-                        icon: Icon(Icons.star_border_outlined),
+                        icon: const Icon(Icons.star_border_outlined),
                         onPressed: () {},
                       ),
                       IconButton(
-                        icon: Icon(Icons.share),
+                        icon: const Icon(Icons.share),
                         onPressed: () {},
                       ),
                     ],

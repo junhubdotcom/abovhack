@@ -14,6 +14,12 @@ class ChatPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+      ),
+      /*appBar: AppBar(
+        leading: IconButton(
           icon: Icon(Icons.search, size: 35.0, color: Color(0XFFFF9973)),
           onPressed: () {},
         ),
@@ -91,49 +97,49 @@ class ChatPage extends StatelessWidget {
             ),
           ),
         ],
-      ),
+      ),*/
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
           children: [
-            SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                SizedBox(height: 40.0),
+                const SizedBox(height: 40.0),
                 ElevatedButton(
                   onPressed: () {},
-                  child: Text(
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                    backgroundColor: const Color(0xff7ecfe0),
+                  ),
+                  child: const Text(
                     "Individual",
                     style: TextStyle(
                         color: Color(0xff695757), fontWeight: FontWeight.bold),
                   ),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0),
                     ),
-                    backgroundColor: Color(0xff7ecfe0),
+                    backgroundColor: const Color(0xffd9d9d9),
                   ),
-                ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text(
+                  child: const Text(
                     "Community",
                     style: TextStyle(
                         color: Colors.black, fontWeight: FontWeight.bold),
                   ),
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0),
-                    ),
-                    backgroundColor: Color(0xffd9d9d9),
-                  ),
                 ),
               ],
             ),
-            SizedBox(height: 40.0),
+            const SizedBox(height: 40.0),
             ListTile(
-              leading: Stack(
+              leading: const Stack(
                 children: [
                   CircleAvatar(
                     radius: 30.0,
@@ -165,17 +171,17 @@ class ChatPage extends StatelessWidget {
                   ),
                 ],
               ),
-              title: Text(
+              title: const Text(
                 'Wendy Law',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
-              subtitle: Text(
+              subtitle: const Text(
                 "Wendy Law: For me, I'll stick to more traditional assets currently because I feel more comfortable knowing my investments are backed by something tangible.",
                 overflow: TextOverflow.ellipsis,
                 maxLines: 2,
                 style: TextStyle(fontSize: 10),
               ),
-              trailing: Text(
+              trailing: const Text(
                 '3 min ago',
                 style: TextStyle(
                     fontSize: 8.0,
@@ -185,12 +191,12 @@ class ChatPage extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: ((context) => ChatDetailsPage())),
+                  MaterialPageRoute(builder: ((context) => const ChatDetailsPage())),
                 );
               },
             ),
-            SizedBox(height: 20.0),
-            ListTile(
+            const SizedBox(height: 20.0),
+            const ListTile(
               leading: Stack(
                 children: [
                   CircleAvatar(
@@ -233,8 +239,8 @@ class ChatPage extends StatelessWidget {
                     color: Colors.grey),
               ),
             ),
-            SizedBox(height: 20.0),
-            ListTile(
+            const SizedBox(height: 20.0),
+            const ListTile(
               leading: Stack(
                 children: [
                   CircleAvatar(
@@ -270,8 +276,8 @@ class ChatPage extends StatelessWidget {
                     color: Colors.grey),
               ),
             ),
-            SizedBox(height: 20.0),
-            ListTile(
+            const SizedBox(height: 20.0),
+            const ListTile(
               leading: Stack(
                 children: [
                   CircleAvatar(
@@ -302,9 +308,9 @@ class ChatPage extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: BottomAppBar(
+      /*bottomNavigationBar: BottomAppBar(
         notchMargin: 10.0,
-        shape: CircularNotchedRectangle(),
+        shape: const CircularNotchedRectangle(),
         color: Colors.white,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -312,20 +318,20 @@ class ChatPage extends StatelessWidget {
           children: [
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.video_collection,
+              icon: const Icon(Icons.video_collection,
                   size: 40.0, color: Color(0xffff9973)),
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.people, size: 40.0, color: Color(0xffff9973)),
+              icon: const Icon(Icons.people, size: 40.0, color: Color(0xffff9973)),
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.chat, size: 40, color: Color(0xffff9973)),
+              icon: const Icon(Icons.chat, size: 40, color: Color(0xffff9973)),
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.chat_bubble, size: 40, color: Color(0xffff9973)),
+              icon: const Icon(Icons.chat_bubble, size: 40, color: Color(0xffff9973)),
             ),
           ],
         ),
@@ -333,11 +339,11 @@ class ChatPage extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        child: Icon(Icons.home),
-        backgroundColor: Color(0xffff9973),
+        backgroundColor: const Color(0xffff9973),
         foregroundColor: Colors.white,
-        shape: CircleBorder(),
-      ),
+        shape: const CircleBorder(),
+        child: const Icon(Icons.home),
+      ),*/
     );
   }
 }

@@ -13,7 +13,7 @@ class CreateFundState extends State<CreateFund> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Center(
-            child: SingleChildScrollView(
+            child: Center(
                 child: Container(
                     height: MediaQuery.of(context).size.height,
                     width: double.infinity,

@@ -15,7 +15,7 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      /*appBar: AppBar(
         leading: IconButton(
           icon: Icon(Icons.search, size: 35.0, color: Color(0XFFFF9973)),
           onPressed: () {},
@@ -94,33 +94,33 @@ class ProfilePage extends StatelessWidget {
             ),
           ),
         ],
-      ),
+      ),*/
       body: SingleChildScrollView(
         child: Column(
           children: [
             Container(
-              color: Color(0xffff9973),
+              color: const Color(0xffff9973),
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Row(
                   children: [
-                    CircleAvatar(
+                    const CircleAvatar(
                       radius: 70.0,
                       backgroundImage: NetworkImage(
                           'https://storage.googleapis.com/pai-images/58286c435ac54f078f246c3e9cc14c1d.jpeg'),
                     ),
-                    SizedBox(width: 13.0),
+                    const SizedBox(width: 13.0),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           "Michelle Teoh",
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
                               fontSize: 25.0),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 5.0,
                         ),
                         Container(
@@ -128,8 +128,8 @@ class ProfilePage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(10.0),
                             color: Colors.white,
                           ),
-                          child: Padding(
-                            padding: const EdgeInsets.only(
+                          child: const Padding(
+                            padding: EdgeInsets.only(
                                 top: 2.0, bottom: 2.0, left: 6.0, right: 6.0),
                             child: Text(
                               "Financial Enthusiast",
@@ -138,17 +138,17 @@ class ProfilePage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 5.0,
                         ),
-                        Text(
+                        const Text(
                           "Software Engineering of TL Company",
                           style: TextStyle(
                               fontWeight: FontWeight.w500,
                               color: Colors.white,
                               fontSize: 12.0),
                         ),
-                        Text(
+                        const Text(
                           "Fresh Graduate from UPM",
                           style: TextStyle(
                               fontWeight: FontWeight.w500,
@@ -166,17 +166,17 @@ class ProfilePage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 20.0),
-                  Text(
+                  const SizedBox(height: 20.0),
+                  const Text(
                     "About Me",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 23.0,
                     ),
                   ),
-                  Text(
+                  const Text(
                       "I'm excited to shares my interests in finance, always eager to learn and engage in discussions about investment trends, money-saving tips, and achieving financial goals. Let's collaborate and leverage technology to empower ourselves financially!"),
-                  SizedBox(
+                  const SizedBox(
                     height: 10.0,
                   ),
                   Row(
@@ -184,7 +184,12 @@ class ProfilePage extends StatelessWidget {
                     children: [
                       ElevatedButton(
                         onPressed: () {},
-                        child: Column(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xff7ecfe0),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0)),
+                        ),
+                        child: const Column(
                           children: [
                             Text(
                               "340",
@@ -194,15 +199,15 @@ class ProfilePage extends StatelessWidget {
                                 style: TextStyle(color: Colors.black)),
                           ],
                         ),
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xff7ecfe0),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.0)),
-                        ),
                       ),
                       ElevatedButton(
                         onPressed: () {},
-                        child: Column(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xff7ecfe0),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0)),
+                        ),
+                        child: const Column(
                           children: [
                             Text(
                               "340",
@@ -214,15 +219,15 @@ class ProfilePage extends StatelessWidget {
                             ),
                           ],
                         ),
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xff7ecfe0),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.0)),
-                        ),
                       ),
                       ElevatedButton(
                         onPressed: () {},
-                        child: Column(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xff7ecfe0),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0)),
+                        ),
+                        child: const Column(
                           children: [
                             Text(
                               "340",
@@ -234,15 +239,10 @@ class ProfilePage extends StatelessWidget {
                             )
                           ],
                         ),
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xff7ecfe0),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.0)),
-                        ),
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15.0,
                   ),
                   //Button for Post and Collection
@@ -250,7 +250,7 @@ class ProfilePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           border: Border(
                               bottom: BorderSide(
                             color: Color(0xffff9973),
@@ -259,7 +259,7 @@ class ProfilePage extends StatelessWidget {
                         ),
                         child: TextButton(
                             onPressed: () {},
-                            child: Text(
+                            child: const Text(
                               "Post",
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -269,7 +269,7 @@ class ProfilePage extends StatelessWidget {
                             )),
                       ),
                       Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           border: Border(
                               bottom: BorderSide(
                             color: Color(0xff87807F),
@@ -278,7 +278,7 @@ class ProfilePage extends StatelessWidget {
                         ),
                         child: TextButton(
                             onPressed: () {},
-                            child: Text(
+                            child: const Text(
                               "Collection",
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -290,7 +290,7 @@ class ProfilePage extends StatelessWidget {
                     ],
                   ),
 
-                  SizedBox(
+                  const SizedBox(
                     height: 10.0,
                   ),
                   Column(
@@ -298,15 +298,15 @@ class ProfilePage extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          CircleAvatar(
+                          const CircleAvatar(
                             backgroundImage: NetworkImage(
                                 'https://storage.googleapis.com/pai-images/58286c435ac54f078f246c3e9cc14c1d.jpeg'),
                           ),
-                          SizedBox(width: 10.0),
+                          const SizedBox(width: 10.0),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Row(
+                              const Row(
                                 children: [
                                   Text("Michelle Teoh",
                                       style: TextStyle(
@@ -317,14 +317,14 @@ class ProfilePage extends StatelessWidget {
                                           fontSize: 8.0, color: Colors.grey)),
                                 ],
                               ),
-                              SizedBox(height: 3.0),
+                              const SizedBox(height: 3.0),
                               Container(
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10.0),
                                   color: Colors.green.shade200,
                                 ),
-                                child: Padding(
-                                  padding: const EdgeInsets.only(
+                                child: const Padding(
+                                  padding: EdgeInsets.only(
                                       top: 2.0,
                                       bottom: 2.0,
                                       left: 8.0,
@@ -337,11 +337,11 @@ class ProfilePage extends StatelessWidget {
                               ),
                             ],
                           ),
-                          Spacer(),
+                          const Spacer(),
                         ],
                       ),
-                      SizedBox(height: 10.0),
-                      Text(
+                      const SizedBox(height: 10.0),
+                      const Text(
                         "Tax Awareness Alert! 📢",
                         style: TextStyle(
                             fontSize: 25, fontWeight: FontWeight.bold),
@@ -353,45 +353,45 @@ class ProfilePage extends StatelessWidget {
                         trimMode: TrimMode.Line,
                         trimCollapsedText: 'More',
                         trimExpandedText: 'Less',
-                        moreStyle: TextStyle(
+                        moreStyle: const TextStyle(
                             fontSize: 14, fontWeight: FontWeight.bold),
                       ),
                       Row(
                         children: [
                           IconButton(
-                            icon: Icon(Icons.favorite_border_outlined),
+                            icon: const Icon(Icons.favorite_border_outlined),
                             onPressed: () {},
                           ),
                           IconButton(
-                            icon: Icon(Icons.comment_outlined),
+                            icon: const Icon(Icons.comment_outlined),
                             onPressed: () {},
                           ),
                           IconButton(
-                            icon: Icon(Icons.star_border_outlined),
+                            icon: const Icon(Icons.star_border_outlined),
                             onPressed: () {},
                           ),
                           IconButton(
-                            icon: Icon(Icons.share),
+                            icon: const Icon(Icons.share),
                             onPressed: () {},
                           ),
                         ],
                       ),
-                      Divider(
+                      const Divider(
                         color: Colors.grey,
                       ),
                       Column(
                         children: [
                           Row(
                             children: [
-                              CircleAvatar(
+                              const CircleAvatar(
                                 backgroundImage: NetworkImage(
                                     'https://storage.googleapis.com/pai-images/58286c435ac54f078f246c3e9cc14c1d.jpeg'),
                               ),
-                              SizedBox(width: 10.0),
+                              const SizedBox(width: 10.0),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Row(
+                                  const Row(
                                     children: [
                                       Text("Michelle Teoh",
                                           style: TextStyle(
@@ -415,14 +415,14 @@ class ProfilePage extends StatelessWidget {
                                               color: Colors.grey)),
                                     ],
                                   ),
-                                  SizedBox(height: 3.0),
+                                  const SizedBox(height: 3.0),
                                   Container(
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(10.0),
-                                      color: Color(0xffadd3ff),
+                                      color: const Color(0xffadd3ff),
                                     ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(
+                                    child: const Padding(
+                                      padding: EdgeInsets.only(
                                           top: 2.0,
                                           bottom: 2.0,
                                           left: 8.0,
@@ -435,17 +435,17 @@ class ProfilePage extends StatelessWidget {
                                   ),
                                 ],
                               ),
-                              Spacer(),
+                              const Spacer(),
                             ],
                           ),
-                          SizedBox(height: 10.0),
-                          Text(
+                          const SizedBox(height: 10.0),
+                          const Text(
                             "Investing with Confidence: Expert Tips and Strategies",
                             style: TextStyle(
                                 fontSize: 25, fontWeight: FontWeight.bold),
                           ),
                           //videoPlayer(videoUrl: 'https://youtube.com/shorts/TOsOR48dQ78?si=iao5Bd8Y176eY7oi'),
-                          Stack(
+                          const Stack(
                             children: [
                               Image(
                                   image: NetworkImage(
@@ -466,19 +466,19 @@ class ProfilePage extends StatelessWidget {
                       Row(
                         children: [
                           IconButton(
-                            icon: Icon(Icons.favorite_border_outlined),
+                            icon: const Icon(Icons.favorite_border_outlined),
                             onPressed: () {},
                           ),
                           IconButton(
-                            icon: Icon(Icons.comment_outlined),
+                            icon: const Icon(Icons.comment_outlined),
                             onPressed: () {},
                           ),
                           IconButton(
-                            icon: Icon(Icons.star_border_outlined),
+                            icon: const Icon(Icons.star_border_outlined),
                             onPressed: () {},
                           ),
                           IconButton(
-                            icon: Icon(Icons.share),
+                            icon: const Icon(Icons.share),
                             onPressed: () {},
                           ),
                         ],
@@ -491,9 +491,9 @@ class ProfilePage extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: BottomAppBar(
+      /*bottomNavigationBar: BottomAppBar(
         notchMargin: 10.0,
-        shape: CircularNotchedRectangle(),
+        shape: const CircularNotchedRectangle(),
         color: Colors.white,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -506,7 +506,7 @@ class ProfilePage extends StatelessWidget {
                   MaterialPageRoute(builder: ((context) => ShortVideoPage())),
                 );
               },
-              icon: Icon(Icons.video_collection,
+              icon: const Icon(Icons.video_collection,
                   size: 40.0, color: Color(0xffff9973)),
             ),
             IconButton(
@@ -516,25 +516,25 @@ class ProfilePage extends StatelessWidget {
                   MaterialPageRoute(builder: ((context) => CommunityPage())),
                 );
               },
-              icon: Icon(Icons.people, size: 40.0, color: Color(0xffff9973)),
+              icon: const Icon(Icons.people, size: 40.0, color: Color(0xffff9973)),
             ),
             IconButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: ((context) => ChatPage())),
+                  MaterialPageRoute(builder: ((context) => const ChatPage())),
                 );
               },
-              icon: Icon(Icons.chat, size: 40, color: Color(0xffff9973)),
+              icon: const Icon(Icons.chat, size: 40, color: Color(0xffff9973)),
             ),
             IconButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: ((context) => ProfilePage())),
+                  MaterialPageRoute(builder: ((context) => const ProfilePage())),
                 );
               },
-              icon: Icon(Icons.person, size: 40, color: Color(0xffff9973)),
+              icon: const Icon(Icons.person, size: 40, color: Color(0xffff9973)),
             ),
           ],
         ),
@@ -542,11 +542,11 @@ class ProfilePage extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        child: Icon(Icons.home),
-        backgroundColor: Color(0xffff9973),
+        child: const Icon(Icons.home),
+        backgroundColor: const Color(0xffff9973),
         foregroundColor: Colors.white,
-        shape: CircleBorder(),
-      ),
+        shape: const CircleBorder(),
+      ),*/
     );
   }
 }
