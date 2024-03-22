@@ -31,14 +31,14 @@ class _PostingPageState extends State<PostingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      /*appBar: AppBar(
         leading: IconButton(
           icon: Icon(Icons.arrow_back, size: 35.0, color: Color(0XFFFF9973)),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
-      ),
+      ),*/
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Center(
@@ -48,13 +48,13 @@ class _PostingPageState extends State<PostingPage> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "Write your post here",
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
                   ),
-                  SizedBox(height: 3.0),
-                  TextField(
+                  const SizedBox(height: 3.0),
+                  const TextField(
                     minLines: 1,
                     maxLines: 2,
                     decoration: InputDecoration(
@@ -69,16 +69,16 @@ class _PostingPageState extends State<PostingPage> {
                     children: [
                       IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.add_a_photo),
+                        icon: const Icon(Icons.add_a_photo),
                       ),
                       IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.post_add),
+                        icon: const Icon(Icons.post_add),
                       ),
                     ],
                   ),
-                  SizedBox(height: 30.0),
-                  Text(
+                  const SizedBox(height: 30.0),
+                  const Text(
                     "Select the label of your post",
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
@@ -86,13 +86,13 @@ class _PostingPageState extends State<PostingPage> {
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.7,
                     child: DropdownButtonFormField(
-                      dropdownColor: Color(0xffd9d9d9),
+                      dropdownColor: const Color(0xffd9d9d9),
                       value: selectedPostLabelVal,
                       items: postLabel
                           .map((e) => DropdownMenuItem(
                                 child: Text(
                                   e,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 15.0,
                                       fontWeight: FontWeight.normal),
                                 ),
@@ -106,8 +106,8 @@ class _PostingPageState extends State<PostingPage> {
                       },
                     ),
                   ),
-                  SizedBox(height: 40.0),
-                  Text(
+                  const SizedBox(height: 40.0),
+                  const Text(
                     "Select your audience",
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
@@ -115,13 +115,13 @@ class _PostingPageState extends State<PostingPage> {
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.5,
                     child: DropdownButtonFormField(
-                      dropdownColor: Color(0xffd9d9d9),
+                      dropdownColor: const Color(0xffd9d9d9),
                       value: selectedPostToVal,
                       items: postToList
                           .map((e) => DropdownMenuItem(
                                 child: Text(
                                   e,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 15.0,
                                       fontWeight: FontWeight.normal),
                                 ),
@@ -142,10 +142,10 @@ class _PostingPageState extends State<PostingPage> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: ((context) => SocialMediaHomePage())),
+                        builder: ((context) => const SocialMediaHomePage())),
                   );
                 },
-                child: Text(
+                child: const Text(
                   "Post",
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -153,7 +153,7 @@ class _PostingPageState extends State<PostingPage> {
                       fontSize: 20.0),
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xff7ecfe0),
+                  backgroundColor: const Color(0xff7ecfe0),
                 ),
               ),
             ],

@@ -61,7 +61,7 @@ class _CommunityPageState extends State<CommunityPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      /*appBar: AppBar(
         leading: IconButton(
           icon: Icon(Icons.search, size: 35.0, color: Color(0XFFFF9973)),
           onPressed: () {},
@@ -140,14 +140,14 @@ class _CommunityPageState extends State<CommunityPage> {
             ),
           ),
         ],
-      ),
+      ),*/
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 "Today's Highlights",
                 style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold),
               ),
@@ -173,7 +173,7 @@ class _CommunityPageState extends State<CommunityPage> {
                                 borderRadius: BorderRadius.circular(24.0),
                                 color: Colors.white,
                                 border: Border.all(
-                                    color: Color(0xffff9973), width: 10.0),
+                                    color: const Color(0xffff9973), width: 10.0),
                               ),
                               child: Padding(
                                 padding: const EdgeInsets.all(10.0),
@@ -188,7 +188,7 @@ class _CommunityPageState extends State<CommunityPage> {
                                         Flexible(
                                           child: Text(
                                             widget.postTitle[index],
-                                            style: TextStyle(
+                                            style: const TextStyle(
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 18.0),
                                             overflow: TextOverflow.ellipsis,
@@ -201,7 +201,7 @@ class _CommunityPageState extends State<CommunityPage> {
                                         ),
                                       ],
                                     ),
-                                    SizedBox(height: 3.0),
+                                    const SizedBox(height: 3.0),
                                     ClipRRect(
                                       borderRadius: BorderRadius.circular(10.0),
                                       child: Image(
@@ -209,7 +209,7 @@ class _CommunityPageState extends State<CommunityPage> {
                                             NetworkImage(widget.postPic[index]),
                                       ),
                                     ),
-                                    SizedBox(height: 3.0),
+                                    const SizedBox(height: 3.0),
                                     Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceBetween,
@@ -221,10 +221,10 @@ class _CommunityPageState extends State<CommunityPage> {
                                                     widget.communityProfilePic[
                                                         index]),
                                               ),
-                                              SizedBox(width: 3.0),
+                                              const SizedBox(width: 3.0),
                                               Text(
                                                 widget.communityName[index],
-                                                style: TextStyle(
+                                                style: const TextStyle(
                                                     fontWeight:
                                                         FontWeight.bold),
                                               ),
@@ -232,15 +232,15 @@ class _CommunityPageState extends State<CommunityPage> {
                                           ),
                                           ElevatedButton(
                                             onPressed: () {},
-                                            child: Text(
+                                            style: ElevatedButton.styleFrom(
+                                              backgroundColor:
+                                                  const Color(0xff7ecfe0),
+                                            ),
+                                            child: const Text(
                                               'Join',
                                               style: TextStyle(
                                                   fontWeight: FontWeight.bold,
                                                   color: Colors.black),
-                                            ),
-                                            style: ElevatedButton.styleFrom(
-                                              backgroundColor:
-                                                  Color(0xff7ecfe0),
                                             ),
                                           ),
                                         ]),
@@ -277,7 +277,7 @@ class _CommunityPageState extends State<CommunityPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
+                  const Text(
                     "Your Community",
                     style:
                         TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
@@ -300,23 +300,23 @@ class _CommunityPageState extends State<CommunityPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: ((context) => CommunityProfilePage())),
+                              builder: ((context) => const CommunityProfilePage())),
                         );
                       },
-                      child: CommunityCardJoined(
+                      child: const CommunityCardJoined(
                           communityProfilePic:
                               'https://images.freeimages.com/cme/images/istock/previews/4770/47704764-financial-wizard.jpg',
                           communityName: 'InvestPro',
                           communityDescription:
                               'Elevate your financial future with expert investment guidance and practical tips. Join us for informed decisions and success in the investment world!'),
                     ),
-                    CommunityCardJoined(
+                    const CommunityCardJoined(
                         communityProfilePic:
                             'https://c8.alamy.com/comp/W2TFXY/3d-rendered-image-of-an-army-soldier-3d-cartoon-character-holding-a-us-dollar-currency-symbol-W2TFXY.jpg',
                         communityName: 'Saving Squad',
                         communityDescription:
                             'A community focused on encouraging and motivating members to save money, budget effectively, and develop healthy financial habits.'),
-                    CommunityCardJoined(
+                    const CommunityCardJoined(
                         communityProfilePic:
                             'https://img.freepik.com/premium-vector/tiny-businessman-character-tight-huge-budget-sack-with-belt-businessman-economy-crisis-situation-trying-reduce-money-spending-investment-decrease-sale-drop-cartoon-people-vector-illustration_87771-11222.jpg',
                         communityName: 'Budget Genius',
@@ -325,15 +325,15 @@ class _CommunityPageState extends State<CommunityPage> {
                   ],
                 ),
               ),
-              SizedBox(height: 10.0),
-              Text(
+              const SizedBox(height: 10.0),
+              const Text(
                 "Suggested for you",
                 style: TextStyle(fontSize: 12.0),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
+                  const Text(
                     "Financial skills",
                     style:
                         TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
@@ -345,7 +345,7 @@ class _CommunityPageState extends State<CommunityPage> {
                   ),
                 ],
               ),
-              SingleChildScrollView(
+              const SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
@@ -371,13 +371,13 @@ class _CommunityPageState extends State<CommunityPage> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 6.0,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
+                  const Text(
                     "Investment Knowledge",
                     style:
                         TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
@@ -391,7 +391,7 @@ class _CommunityPageState extends State<CommunityPage> {
                   ),
                 ],
               ),
-              SingleChildScrollView(
+              const SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
@@ -420,7 +420,7 @@ class _CommunityPageState extends State<CommunityPage> {
           ),
         ),
       ),
-      bottomNavigationBar: BottomAppBar(
+      /*bottomNavigationBar: BottomAppBar(
         notchMargin: 10.0,
         shape: CircularNotchedRectangle(),
         color: Colors.white,
@@ -455,7 +455,7 @@ class _CommunityPageState extends State<CommunityPage> {
         backgroundColor: Color(0xffff9973),
         foregroundColor: Colors.white,
         shape: CircleBorder(),
-      ),
+      ),*/
     );
   }
 }
@@ -478,7 +478,7 @@ class CommunityCardJoined extends StatelessWidget {
         width: 200,
         height: 300,
         decoration: BoxDecoration(
-          color: Color(0xff7ecfe0),
+          color: const Color(0xff7ecfe0),
           borderRadius: BorderRadius.circular(30.0),
         ),
         child: Padding(
@@ -492,15 +492,15 @@ class CommunityCardJoined extends StatelessWidget {
                     radius: 28.0,
                     backgroundImage: NetworkImage(communityProfilePic),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 3.0,
                   ),
                   Text(
                     communityName,
                     style:
-                        TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+                        const TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 3.0),
+                  const SizedBox(height: 3.0),
                   Text(
                     communityDescription,
                   ),
@@ -508,16 +508,16 @@ class CommunityCardJoined extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {},
-                child: Text(
-                  "Joined",
-                  style: TextStyle(color: Colors.black),
-                ),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
-                  padding: EdgeInsets.all(0),
+                  padding: const EdgeInsets.all(0),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                   ),
+                ),
+                child: const Text(
+                  "Joined",
+                  style: TextStyle(color: Colors.black),
                 ),
               ),
             ],
@@ -546,7 +546,7 @@ class CommunityCardUnjoined extends StatelessWidget {
         width: 200,
         height: 300,
         decoration: BoxDecoration(
-          color: Color(0xff7ecfe0),
+          color: const Color(0xff7ecfe0),
           borderRadius: BorderRadius.circular(30.0),
         ),
         child: Padding(
@@ -560,15 +560,15 @@ class CommunityCardUnjoined extends StatelessWidget {
                     radius: 28.0,
                     backgroundImage: NetworkImage(communityProfilePic),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 3.0,
                   ),
                   Text(
                     communityName,
                     style:
-                        TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+                        const TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 3.0),
+                  const SizedBox(height: 3.0),
                   Text(
                     communityDescription,
                   ),
@@ -576,16 +576,16 @@ class CommunityCardUnjoined extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {},
-                child: Text(
-                  "Join",
-                  style: TextStyle(color: Colors.white),
-                ),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blueGrey.shade400,
-                  padding: EdgeInsets.all(0),
+                  padding: const EdgeInsets.all(0),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                   ),
+                ),
+                child: const Text(
+                  "Join",
+                  style: TextStyle(color: Colors.white),
                 ),
               ),
             ],

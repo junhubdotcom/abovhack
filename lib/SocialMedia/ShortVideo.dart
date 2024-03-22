@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:card_swiper/card_swiper.dart';
 
 class ShortVideoPage extends StatefulWidget {
-  ShortVideoPage({Key? key});
+  const ShortVideoPage({super.key});
 
   @override
   State<ShortVideoPage> createState() => _ShortVideoPageState();
@@ -59,7 +59,7 @@ class _ShortVideoPageState extends State<ShortVideoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      /*appBar: AppBar(
         leading: IconButton(
           icon: Icon(Icons.search, size: 35.0, color: Color(0XFFFF9973)),
           onPressed: () {},
@@ -138,143 +138,141 @@ class _ShortVideoPageState extends State<ShortVideoPage> {
             ),
           ),
         ],
-      ),
+      ),*/
       //Make this image changable
       body: SafeArea(
-        child: Container(
-          child: Stack(
-            children: [
-              Swiper(
-                  itemBuilder: (BuildContext context, int index) {
-                    return Stack(
-                      fit: StackFit.expand,
-                      children: [
-                        Image.network(listOfVideos[index],
-                            fit: BoxFit.cover), // Adjusted the index
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              SizedBox(),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      SizedBox(height: 70.0),
-                                      Row(
-                                        children: [
-                                          CircleAvatar(
-                                            backgroundImage: NetworkImage(
-                                              listOfProfilePics[
-                                                  index], // Adjusted the index
-                                            ),
-                                            radius: 16,
+        child: Stack(
+          children: [
+            Swiper(
+                itemBuilder: (BuildContext context, int index) {
+                  return Stack(
+                    fit: StackFit.expand,
+                    children: [
+                      Image.network(listOfVideos[index],
+                          fit: BoxFit.cover), // Adjusted the index
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const SizedBox(),
+                            Row(
+                              mainAxisAlignment:
+                                  MainAxisAlignment.spaceBetween,
+                              children: [
+                                Column(
+                                  crossAxisAlignment:
+                                      CrossAxisAlignment.start,
+                                  children: [
+                                    const SizedBox(height: 70.0),
+                                    Row(
+                                      children: [
+                                        CircleAvatar(
+                                          backgroundImage: NetworkImage(
+                                            listOfProfilePics[
+                                                index], // Adjusted the index
                                           ),
-                                          SizedBox(width: 6),
-                                          Text(
-                                              listOfNames[
-                                                  index], // Handle null value
-                                              style: TextStyle(
-                                                fontSize: 12.0,
-                                                fontWeight: FontWeight.bold,
-                                                color: Colors.white,
-                                              )),
-                                          SizedBox(width: 6),
-                                          Text(
-                                              listOfTime[
-                                                  index], // Handle null value
-                                              style: TextStyle(
-                                                fontSize: 10.0,
-                                                color: Colors.white,
-                                              )),
-                                          SizedBox(width: 6),
-                                          ElevatedButton(
-                                            onPressed: () {},
-                                            child: Text(
-                                              'Follow',
-                                              style: TextStyle(
-                                                  color: Colors.black),
-                                            ),
-                                            style: ElevatedButton.styleFrom(
-                                              backgroundColor:
-                                                  Color(0xff7ecfe0),
-                                              padding: EdgeInsets.all(0),
-                                            ),
+                                          radius: 16,
+                                        ),
+                                        const SizedBox(width: 6),
+                                        Text(
+                                            listOfNames[
+                                                index], // Handle null value
+                                            style: const TextStyle(
+                                              fontSize: 12.0,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.white,
+                                            )),
+                                        const SizedBox(width: 6),
+                                        Text(
+                                            listOfTime[
+                                                index], // Handle null value
+                                            style: const TextStyle(
+                                              fontSize: 10.0,
+                                              color: Colors.white,
+                                            )),
+                                        const SizedBox(width: 6),
+                                        ElevatedButton(
+                                          onPressed: () {},
+                                          style: ElevatedButton.styleFrom(
+                                            backgroundColor:
+                                                const Color(0xff7ecfe0),
+                                            padding: const EdgeInsets.all(0),
                                           ),
-                                        ],
-                                      ),
-                                      Text(listOfTitle[index],
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 15.0,
-                                            color: Colors.white,
-                                          )),
-                                      Text(
-                                          listOfCaption[
-                                              index], // Handle null value
-                                          style: TextStyle(
-                                            fontSize: 12.0,
-                                            color: Colors.white,
-                                          )),
-                                      Text(
-                                          listOfHashTag[
-                                              index], // Handle null value
-                                          style: TextStyle(
-                                            fontSize: 12.0,
-                                            color: Colors.white,
-                                          )),
-                                      // SizedBox(height: 10.0),
-                                    ],
-                                  ),
-                                  Column(
-                                    children: [
-                                      Icon(
-                                        Icons.favorite_border_outlined,
-                                        size: 50.0,
-                                        color: Colors.white,
-                                      ),
-                                      SizedBox(height: 20.0),
-                                      Icon(
-                                        Icons.comment_outlined,
-                                        size: 50.0,
-                                        color: Colors.white,
-                                      ),
-                                      SizedBox(height: 20.0),
-                                      Icon(
-                                        Icons.star_border_outlined,
-                                        size: 50.0,
-                                        color: Colors.white,
-                                      ),
-                                      SizedBox(height: 20.0),
-                                      Icon(
-                                        Icons.share,
-                                        size: 50.0,
-                                        color: Colors.white,
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
+                                          child: const Text(
+                                            'Follow',
+                                            style: TextStyle(
+                                                color: Colors.black),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Text(listOfTitle[index],
+                                        style: const TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 15.0,
+                                          color: Colors.white,
+                                        )),
+                                    Text(
+                                        listOfCaption[
+                                            index], // Handle null value
+                                        style: const TextStyle(
+                                          fontSize: 12.0,
+                                          color: Colors.white,
+                                        )),
+                                    Text(
+                                        listOfHashTag[
+                                            index], // Handle null value
+                                        style: const TextStyle(
+                                          fontSize: 12.0,
+                                          color: Colors.white,
+                                        )),
+                                    // SizedBox(height: 10.0),
+                                  ],
+                                ),
+                                const Column(
+                                  children: [
+                                    Icon(
+                                      Icons.favorite_border_outlined,
+                                      size: 50.0,
+                                      color: Colors.white,
+                                    ),
+                                    SizedBox(height: 20.0),
+                                    Icon(
+                                      Icons.comment_outlined,
+                                      size: 50.0,
+                                      color: Colors.white,
+                                    ),
+                                    SizedBox(height: 20.0),
+                                    Icon(
+                                      Icons.star_border_outlined,
+                                      size: 50.0,
+                                      color: Colors.white,
+                                    ),
+                                    SizedBox(height: 20.0),
+                                    Icon(
+                                      Icons.share,
+                                      size: 50.0,
+                                      color: Colors.white,
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
-                      ],
-                    );
-                  },
-                  itemCount: 3,
-                  scrollDirection: Axis.vertical),
-            ],
-          ),
+                      ),
+                    ],
+                  );
+                },
+                itemCount: 3,
+                scrollDirection: Axis.vertical),
+          ],
         ),
       ),
-      bottomNavigationBar: BottomAppBar(
+      /*bottomNavigationBar: BottomAppBar(
         notchMargin: 10.0,
-        shape: CircularNotchedRectangle(),
+        shape: const CircularNotchedRectangle(),
         color: Colors.white,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -282,20 +280,20 @@ class _ShortVideoPageState extends State<ShortVideoPage> {
           children: [
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.video_collection,
+              icon: const Icon(Icons.video_collection,
                   size: 40.0, color: Color(0xffff9973)),
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.people, size: 40.0, color: Color(0xffff9973)),
+              icon: const Icon(Icons.people, size: 40.0, color: Color(0xffff9973)),
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.chat, size: 40, color: Color(0xffff9973)),
+              icon: const Icon(Icons.chat, size: 40, color: Color(0xffff9973)),
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.chat_bubble, size: 40, color: Color(0xffff9973)),
+              icon: const Icon(Icons.chat_bubble, size: 40, color: Color(0xffff9973)),
             ),
           ],
         ),
@@ -303,11 +301,11 @@ class _ShortVideoPageState extends State<ShortVideoPage> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        child: Icon(Icons.home),
-        backgroundColor: Color(0xffff9973),
+        child: const Icon(Icons.home),
+        backgroundColor: const Color(0xffff9973),
         foregroundColor: Colors.white,
-        shape: CircleBorder(),
-      ),
+        shape: const CircleBorder(),
+      ),*/
     );
   }
 }

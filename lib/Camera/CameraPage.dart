@@ -94,56 +94,6 @@ class _MainScreenState extends State<MainScreen> with WidgetsBindingObserver {
               ),
 
             Scaffold(
-              appBar: AppBar(
-                backgroundColor: Color(0xff4e4745),
-                leading: Container(
-                  alignment: Alignment.centerLeft,
-                  padding: EdgeInsets.only(left: 10.0),
-                  child: Stack(
-                    children: [
-                      CircleAvatar(
-                        backgroundImage: NetworkImage(
-                            'https://storage.googleapis.com/pai-images/58286c435ac54f078f246c3e9cc14c1d.jpeg'),
-                        radius: 23.0,
-                      ),
-                    ],
-                  ),
-                ),
-                title: Container(
-                  height: 40.0,
-                  child: TextField(
-                    decoration: InputDecoration(
-                      fillColor: Color(0xff9c8e8b),
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Colors.white,
-                        ),
-                      ),
-                      hintText: "Search",
-                      hintStyle: TextStyle(color: Colors.white),
-                      prefixIcon: Icon(
-                        Icons.search,
-                        color: Colors.white,
-                      ),
-                      contentPadding: EdgeInsets.all(10.0),
-                    ),
-                  ),
-                ),
-                actions: [
-                  Container(
-                    alignment: Alignment.centerRight,
-                    padding: EdgeInsets.only(right: 10.0),
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        Icons.chat,
-                        size: 35.0,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
               // Set the background to transparent so you can see the camera preview
               backgroundColor: _isPermissionGranted ? Colors.transparent : null,
               body: _isPermissionGranted

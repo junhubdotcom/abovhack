@@ -1,7 +1,3 @@
-import 'package:abovhack/Account/ListOfFund.dart';
-import 'package:abovhack/Account/SummaryPage.dart';
-import 'package:abovhack/Camera/CameraPage.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class AccountSummary extends StatefulWidget {
@@ -17,53 +13,6 @@ class AccountSummaryState extends State<AccountSummary> {
     return Scaffold(
       body: Column(
         children: [
-          Container(
-            color: Color(0xff4e4745),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                IconButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: ((context) => ListOfFund())),
-                    );
-                  },
-                  icon: Icon(Icons.monetization_on_rounded,
-                      color: Colors.white, size: 30.0),
-                ),
-                IconButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: ((context) => AccountSummary())),
-                    );
-                  },
-                  icon:
-                      Icon(Icons.account_box, color: Colors.white, size: 30.0),
-                ),
-                IconButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: ((context) => SummaryPage())),
-                    );
-                  },
-                  icon: Icon(Icons.bar_chart, color: Colors.white, size: 30.0),
-                ),
-                IconButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: ((context) => CameraPage())),
-                    );
-                  },
-                  icon: Icon(Icons.camera, color: Colors.white, size: 30.0),
-                ),
-              ],
-            ),
-          ),
           Expanded(
             child: SingleChildScrollView(
               child: Column(

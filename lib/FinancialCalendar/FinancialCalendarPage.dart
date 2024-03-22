@@ -1,69 +1,73 @@
 import 'package:flutter/material.dart';
 
 class FinancialCalendarPage extends StatelessWidget {
-  const FinancialCalendarPage({super.key});
+  const FinancialCalendarPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: const Row(
-      //     mainAxisAlignment: MainAxisAlignment.spaceAround,
-      //     children: [],
-      //   ),
-      // ),
-      body: Column(
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          Container(
-            width: double.infinity,
-            height: 30,
-            decoration: BoxDecoration(color: Colors.blueGrey[700]),
-            child: const Padding(
-              padding: EdgeInsets.only(right: 12.0),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text(
-                    'Previous \nPrice',
-                    style: TextStyle(
-                        fontSize: 10.0,
-                        color: Colors.white,
-                        fontWeight: FontWeight.normal),
-                  ),
-                  SizedBox(width: 4.0), //spacing
-                  Text(
-                    'Current \nPrice',
-                    style: TextStyle(
-                        fontSize: 10.0,
-                        color: Colors.white,
-                        fontWeight: FontWeight.normal),
-                  ),
-                  SizedBox(width: 4.0), //spacing
-                  Text(
-                    'Forecast \nPrice',
-                    style: TextStyle(
-                        fontSize: 10.0,
-                        color: Colors.white,
-                        fontWeight: FontWeight.normal),
-                  ),
-                  SizedBox(width: 4.0), //spacing
-                  Text(
-                    'Impact',
-                    style: TextStyle(
-                        fontSize: 10.0,
-                        color: Colors.white,
-                        fontWeight: FontWeight.normal),
-                  )
-                ],
+      appBar: AppBar(
+        title: const Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Padding(
+              padding: EdgeInsets.only(),
+              child: Text(
+                'Financial Calendar',
+                style: TextStyle(
+                    fontSize: 30.0,
+                    color: Color(0XFFFF9973),
+                    fontWeight: FontWeight.bold),
               ),
             ),
-          ),
+            Padding(
+              padding: EdgeInsets.only(),
+              child: Icon(Icons.calendar_month,
+                  size: 35.0, color: Color(0XFFFF9973)),
+            ),
+          ],
+        ),
+      ),
+      body: Column(
+        children: [
           Container(
-            width: double.infinity,
-            height: 635,
-            decoration: const BoxDecoration(color: Colors.white),
+              width: double.infinity,
+              decoration: BoxDecoration(color: Colors.blueGrey.shade700),
+              child: const Padding(
+                  padding: EdgeInsets.only(right: 12),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text('Previous \nPrice',
+                          style: TextStyle(
+                              fontSize: 10.0,
+                              color: Colors.white,
+                              fontWeight: FontWeight.normal)),
+                      SizedBox(width: 4.0), //spacing
+                      Text('Current \nPrice',
+                          style: TextStyle(
+                              fontSize: 10.0,
+                              color: Colors.white,
+                              fontWeight: FontWeight.normal)),
+                      SizedBox(width: 4.0), //spacing
+                      Text(
+                        'Forecast \nPrice',
+                        style: TextStyle(
+                            fontSize: 10.0,
+                            color: Colors.white,
+                            fontWeight: FontWeight.normal),
+                      ),
+                      SizedBox(width: 4.0), //spacing
+                      Text(
+                        'Impact',
+                        style: TextStyle(
+                            fontSize: 10.0,
+                            color: Colors.white,
+                            fontWeight: FontWeight.normal),
+                      )
+                    ],
+                  ))),
+          Expanded(
             child: SingleChildScrollView(
                 child: Column(
               mainAxisSize: MainAxisSize.max,
@@ -688,6 +692,63 @@ class FinancialCalendarPage extends StatelessWidget {
             )),
           ),
         ],
+      ),
+      bottomNavigationBar: BottomAppBar(
+        notchMargin: 10.0,
+        shape: const CircularNotchedRectangle(),
+        color: Colors.white,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(
+                bottom: 10.0,
+              ),
+              child: IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.calendar_month,
+                      size: 40.0, color: Color(0xffff9973))),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 10.0, right: 20.0),
+              child: IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.chat,
+                      size: 40.0, color: Color(0xffff9973))),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 10.0, left: 20.0),
+              child: IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.account_balance_wallet,
+                    size: 40,
+                    color: Color(0xffff9973),
+                  )),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                bottom: 10.0,
+              ),
+              child: IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.legend_toggle_rounded,
+                    size: 40,
+                    color: Color(0xffff9973),
+                  )),
+            ),
+          ],
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.document_scanner),
+        backgroundColor: const Color(0xffff9973),
+        foregroundColor: Colors.white,
+        shape: const CircleBorder(),
       ),
     );
   }

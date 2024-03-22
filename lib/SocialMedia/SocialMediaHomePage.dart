@@ -1,8 +1,3 @@
-import 'package:abovhack/SocialMedia/ChatPage.dart';
-import 'package:abovhack/SocialMedia/Community.dart';
-import 'package:abovhack/SocialMedia/PostingPage.dart';
-import 'package:abovhack/SocialMedia/ProfilePage.dart';
-import 'package:abovhack/SocialMedia/ShortVideo.dart';
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
 
@@ -25,65 +20,6 @@ class _SocialMediaHomePageState extends State<SocialMediaHomePage> {
     return Scaffold(
         body: Column(
       children: [
-        Container(
-          color: const Color(0xff4e4745),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              IconButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: ((context) => const PostingPage())),
-                  );
-                },
-                icon: const Icon(Icons.add_to_photos,
-                    color: Colors.white, size: 30.0),
-              ),
-              IconButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: ((context) => const SocialMediaHomePage())),
-                  );
-                },
-                icon:
-                    const Icon(Icons.article, color: Colors.white, size: 30.0),
-              ),
-              IconButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: ((context) => CommunityPage())),
-                  );
-                },
-                icon: const Icon(Icons.people, color: Colors.white, size: 30.0),
-              ),
-              IconButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: ((context) => ShortVideoPage())),
-                  );
-                },
-                icon: const Icon(Icons.video_collection,
-                    color: Colors.white, size: 30.0),
-              ),
-              IconButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: ((context) => const ProfilePage())),
-                  );
-                },
-                icon: const Icon(Icons.person, color: Colors.white, size: 30.0),
-              ),
-            ],
-          ),
-        ),
         Expanded(
           child: SingleChildScrollView(
             child: Column(

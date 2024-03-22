@@ -10,7 +10,7 @@ class InterestsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, size: 35.0, color: Color(0XFFFF9973)),
+          icon: const Icon(Icons.arrow_back, size: 35.0, color: Color(0XFFFF9973)),
           onPressed: () {
             Navigator.pop(context);
           },
@@ -22,25 +22,25 @@ class InterestsPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Center(
+              const Center(
                 child: Text(
                   "Interest",
                   style: TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold),
                 ),
               ),
-              Center(
+              const Center(
                 child: Text(
                   "Unlock the Secrets of Financial Success",
                   style: TextStyle(fontSize: 15.0),
                 ),
               ),
-              SizedBox(height: 30),
-              Text(
+              const SizedBox(height: 30),
+              const Text(
                 "Financial Concept",
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
               ),
               Container(
-                child: Column(
+                child: const Column(
                   children: [
                     Row(
                       children: [
@@ -59,13 +59,13 @@ class InterestsPage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 20),
-              Text(
+              const SizedBox(height: 20),
+              const Text(
                 "Financial Skills",
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
               ),
               Container(
-                child: Column(
+                child: const Column(
                   children: [
                     Row(
                       children: [
@@ -87,13 +87,13 @@ class InterestsPage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 20),
-              Text(
+              const SizedBox(height: 20),
+              const Text(
                 "Investment Knowledge",
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
               ),
               Container(
-                child: Column(
+                child: const Column(
                   children: [
                     Row(
                       children: [
@@ -118,13 +118,13 @@ class InterestsPage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 20),
-              Text(
+              const SizedBox(height: 20),
+              const Text(
                 "Insurance and Risk Management",
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
               ),
               Container(
-                child: Column(
+                child: const Column(
                   children: [
                     Row(
                       children: [
@@ -147,13 +147,13 @@ class InterestsPage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 20),
-              Text(
+              const SizedBox(height: 20),
+              const Text(
                 "Tax Awareness",
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
               ),
               Container(
-                child: Column(
+                child: const Column(
                   children: [
                     Row(
                       children: [
@@ -171,36 +171,36 @@ class InterestsPage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 20),
-              Text("Digital Financial Literacy",
+              const SizedBox(height: 20),
+              const Text("Digital Financial Literacy",
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
               Container(
                 child: Column(
                   children: [
-                    Row(
+                    const Row(
                       children: [
                         InterestButton(interestName: "Online Banking"),
                         InterestButton(interestName: "Mobile Payment Apps"),
                       ],
                     ),
-                    SizedBox(height: 50),
+                    const SizedBox(height: 50),
                     ElevatedButton(
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: ((context) => SocialMediaHomePage())),
+                              builder: ((context) => const SocialMediaHomePage())),
                         );
                       },
-                      child: Text(
+                      child: const Text(
                         "Continue",
                         style: TextStyle(color: Colors.black, fontSize: 18.0),
                       ),
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xff7ecfe0),
-                          fixedSize: Size(150, 40)),
+                          backgroundColor: const Color(0xff7ecfe0),
+                          fixedSize: const Size(150, 40)),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20.0,
                     ),
                   ],
