@@ -1,116 +1,66 @@
 import 'package:abovhack/Account/AccountSummary.dart';
-import 'package:abovhack/Account/ListOfFund.dart';
-import 'package:abovhack/Account/SummaryPage.dart';
-import 'package:abovhack/Camera/CameraPage.dart';
 import 'package:abovhack/Education/screens/education_home.dart';
-import 'package:abovhack/SocialMedia/InterestsPage.dart';
-import 'package:flutter/material.dart';
-import 'package:abovhack/Account/CreateFund.dart';
-import 'package:abovhack/Account/UserInfo.dart';
 import 'package:abovhack/FinancialCalendar/FinancialCalendarPage.dart';
+import 'package:abovhack/SocialMedia/SocialMediaHomePage.dart';
+import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-HomePage({super.key});
+
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key});
+
+  @override
+  State<HomePage> createState() => HomePageState();
+}
+
+class HomePageState extends State<HomePage> {
+
+  int _selectedIndex = 3;
+  final List<Widget> _pages = <Widget>[
+    const EducationHome(),
+    const AccountSummary(),
+    const FinancialCalendarPage(),
+    const SocialMediaHomePage(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton(
-              child: Text('Social Media'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => InterestsPage()),
-                );
-              },
+      body: _pages[_selectedIndex],
+      bottomNavigationBar: NavigationBarTheme(
+        data: NavigationBarThemeData(
+          labelTextStyle: MaterialStateProperty.resolveWith<TextStyle>(
+            (Set<MaterialState> states) => states.contains(MaterialState.selected)
+                ? const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)
+                : const TextStyle(color: Colors.white),
+          ),
+        ),
+        child: NavigationBar(
+          destinations: const [
+            NavigationDestination(
+              icon: Icon(Icons.book, color: Colors.white),
+              label: 'Education',
             ),
-            SizedBox(height: 16),
-            ElevatedButton(
-              child: Text('Calendar'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Container(child: FinancialCalendarPage())),
-                );
-              },
+            NavigationDestination(
+              icon: Icon(Icons.account_balance_wallet, color: Colors.white),
+              label: 'Account',
             ),
-            SizedBox(height: 16),
-            ElevatedButton(
-              child: Text('Account'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Container(child: UserInfo())),
-                );
-              },
+            NavigationDestination(
+              icon: Icon(Icons.calendar_month, color: Colors.white),
+              label: 'Calendar',
             ),
-            SizedBox(height: 16),
-            ElevatedButton(
-              child: Text('Fund'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Container(child: CreateFund())),
-                );
-              },
-            ),
-            SizedBox(height: 16),
-            ElevatedButton(
-              child: Text('Summary'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Container(child: AccountSummary())),
-                 );
-              },
-            ),
-            SizedBox(height: 16),
-            ElevatedButton(
-              child: Text('Education'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Container(child: EducationHome())),
-                );
-              },
-            ),
-            SizedBox(height: 16),
-            ElevatedButton(
-              child: Text('Camera'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Container(child: CameraPage())),
-                );
-              },
-            ),
-            SizedBox(height: 16),
-            ElevatedButton(
-              child: Text('List of Funds'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Container(child: ListOfFund())),
-                );
-              },
-            ),
-            SizedBox(height: 16),
-            ElevatedButton(
-              child: Text('Suggestion'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Container(child: SummaryPage())),
-                );
-              },
+            NavigationDestination(
+              icon: Icon(Icons.mark_chat_unread, color: Colors.white),
+              label: 'Social Media',
             )
           ],
+          selectedIndex: _selectedIndex,
+          onDestinationSelected: (int index) {
+            setState(() => _selectedIndex = index);
+          },
+          indicatorColor: const Color(0XFFC4B2AE),
+          backgroundColor: const Color(0xff4e4745)
         ),
-      ),
+      )
     );
   }
 }
