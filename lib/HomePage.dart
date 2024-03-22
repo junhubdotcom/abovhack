@@ -35,43 +35,43 @@ class HomePageState extends State<HomePage> {
       length: 5,
       child: Scaffold(
           appBar: AppBar(
-            toolbarHeight: 60,
-            backgroundColor: const Color(0xff4e4745),
-            leading: Container(
-              alignment: Alignment.centerLeft,
-              padding: const EdgeInsets.only(left: 10.0),
-              child: const Stack(
-                children: [
-                  CircleAvatar(
-                    backgroundImage: NetworkImage(
-                        'https://storage.googleapis.com/pai-images/58286c435ac54f078f246c3e9cc14c1d.jpeg'),
-                    radius: 23.0,
-                  ),
-                ],
-              ),
-            ),
-            title: _buildTitleWidget(_selectedIndex),
-            actions: [
-              Container(
-                alignment: Alignment.centerRight,
-                padding: const EdgeInsets.only(right: 10.0),
-                child: IconButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: ((context) => const ChatPage())),
-                    );
-                  },
-                  icon: const Icon(
-                    Icons.chat,
-                    size: 35.0,
-                    color: Colors.white,
-                  ),
+              toolbarHeight: 60,
+              backgroundColor: const Color(0xff4e4745),
+              leading: Container(
+                alignment: Alignment.centerLeft,
+                padding: const EdgeInsets.only(left: 10.0),
+                child: const Stack(
+                  children: [
+                    CircleAvatar(
+                      backgroundImage: NetworkImage(
+                          'https://storage.googleapis.com/pai-images/58286c435ac54f078f246c3e9cc14c1d.jpeg'),
+                      radius: 23.0,
+                    ),
+                  ],
                 ),
               ),
-            ],
-            bottom: _buildTabBarWidget(_selectedIndex)
-          ),
+              title: _buildTitleWidget(_selectedIndex),
+              actions: [
+                Container(
+                  alignment: Alignment.centerRight,
+                  padding: const EdgeInsets.only(right: 10.0),
+                  child: IconButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: ((context) => const ChatPage())),
+                      );
+                    },
+                    icon: const Icon(
+                      Icons.chat,
+                      size: 35.0,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ],
+              bottom: _buildTabBarWidget(_selectedIndex)),
           body: _buildBodyWidget(_selectedIndex),
           bottomNavigationBar: NavigationBarTheme(
             data: NavigationBarThemeData(
@@ -90,7 +90,8 @@ class HomePageState extends State<HomePage> {
                     label: 'Social Media',
                   ),
                   NavigationDestination(
-                    icon: Icon(Icons.account_balance_wallet, color: Colors.white),
+                    icon:
+                        Icon(Icons.account_balance_wallet, color: Colors.white),
                     label: 'Account',
                   ),
                   NavigationDestination(
@@ -150,30 +151,34 @@ class HomePageState extends State<HomePage> {
     switch (index) {
       case 0:
         return const TabBar(
-          indicatorColor: Color(0XFFFF9973),
-          indicatorSize: TabBarIndicatorSize.tab,
-          indicatorWeight: 3,
-          tabs: [
-            Tab(icon: Icon(Icons.add_to_photos, color: Colors.white, size: 30.0)),
-            Tab(icon: Icon(Icons.article, color: Colors.white, size: 30.0)),
-            Tab(icon: Icon(Icons.people, color: Colors.white, size: 30.0)),
-            Tab(icon: Icon(Icons.video_collection,  color: Colors.white, size: 30.0)),
-            Tab(icon: Icon(Icons.person, color: Colors.white, size: 30.0))
-          ]
-        );
+            indicatorColor: Color(0XFFFF9973),
+            indicatorSize: TabBarIndicatorSize.tab,
+            indicatorWeight: 3,
+            tabs: [
+              Tab(icon: Icon(Icons.article, color: Colors.white, size: 30.0)),
+              Tab(icon: Icon(Icons.people, color: Colors.white, size: 30.0)),
+              Tab(
+                  icon: Icon(Icons.video_collection,
+                      color: Colors.white, size: 30.0)),
+              Tab(icon: Icon(Icons.person, color: Colors.white, size: 30.0)),
+              Tab(
+                  icon: Icon(Icons.add_to_photos,
+                      color: Colors.white, size: 30.0)),
+            ]);
       case 1:
         return const TabBar(
-          indicatorColor: Color(0XFFFF9973),
-          indicatorSize: TabBarIndicatorSize.tab,
-          indicatorWeight: 3,
-          tabs: [
-            Tab(icon: Icon(Icons.lightbulb_rounded, color: Colors.white, size: 30.0)),
-            Tab(icon: Icon(Icons.storage, color: Colors.white, size: 30.0)),
-            Tab(icon: Icon(Icons.camera, color: Colors.white, size: 30.0)),
-            Tab(icon: Icon(Icons.person,  color: Colors.white, size: 30.0)),
-            Tab(icon: Icon(Icons.add_circle, color: Colors.white, size: 30.0))
-          ]
-        );
+            indicatorColor: Color(0XFFFF9973),
+            indicatorSize: TabBarIndicatorSize.tab,
+            indicatorWeight: 3,
+            tabs: [
+              Tab(
+                  icon: Icon(Icons.lightbulb_rounded,
+                      color: Colors.white, size: 30.0)),
+              Tab(icon: Icon(Icons.storage, color: Colors.white, size: 30.0)),
+              Tab(icon: Icon(Icons.camera, color: Colors.white, size: 30.0)),
+              Tab(icon: Icon(Icons.person, color: Colors.white, size: 30.0)),
+              Tab(icon: Icon(Icons.add_circle, color: Colors.white, size: 30.0))
+            ]);
       case 2:
         return null;
       case 3:
@@ -186,25 +191,21 @@ class HomePageState extends State<HomePage> {
   Widget? _buildBodyWidget(int index) {
     switch (index) {
       case 0:
-        return TabBarView(
-          children: [
-            const PostingPage(),
-            const SocialMediaHomePage(),
-            CommunityPage(),
-            const ShortVideoPage(),
-            const ProfilePage()
-          ]
-        );
+        return TabBarView(children: [
+          const SocialMediaHomePage(),
+          CommunityPage(),
+          const ShortVideoPage(),
+          const ProfilePage(),
+          const PostingPage(),
+        ]);
       case 1:
-        return const TabBarView(
-          children: [
-            SummaryPage(),
-            ListOfFund(),
-            CameraPage(),
-            AccountSummary(),
-            CreateFund()
-          ]
-        );
+        return const TabBarView(children: [
+          SummaryPage(),
+          ListOfFund(),
+          CameraPage(),
+          AccountSummary(),
+          CreateFund()
+        ]);
       case 2:
         return _pages[index];
       case 3:
