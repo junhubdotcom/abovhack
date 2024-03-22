@@ -1,6 +1,7 @@
 import 'package:abovhack/Account/CreateFund.dart';
 import 'package:abovhack/Account/ListOfFund.dart';
 import 'package:abovhack/Account/SummaryPage.dart';
+import 'package:abovhack/Account/UserInfo.dart';
 import 'package:abovhack/Camera/CameraPage.dart';
 import 'package:flutter/material.dart';
 import 'package:abovhack/Account/AccountSummary.dart';
@@ -12,6 +13,7 @@ import 'package:abovhack/SocialMedia/Community.dart';
 import 'package:abovhack/SocialMedia/PostingPage.dart';
 import 'package:abovhack/SocialMedia/ProfilePage.dart';
 import 'package:abovhack/SocialMedia/ShortVideo.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -21,6 +23,8 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
+
+  bool _isFirst = true;
   int _selectedIndex = 0;
   final List<Widget> _pages = <Widget>[
     const SocialMediaHomePage(),
@@ -90,8 +94,7 @@ class HomePageState extends State<HomePage> {
                     label: 'Social Media',
                   ),
                   NavigationDestination(
-                    icon:
-                        Icon(Icons.account_balance_wallet, color: Colors.white),
+                    icon: Icon(Icons.account_balance_wallet, color: Colors.white),
                     label: 'Account',
                   ),
                   NavigationDestination(
@@ -106,6 +109,14 @@ class HomePageState extends State<HomePage> {
                 selectedIndex: _selectedIndex,
                 onDestinationSelected: (int index) {
                   setState(() => _selectedIndex = index);
+                  if (_isFirst) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: ((context) => const UserInfo())),
+                    );
+                    _isFirst = false;
+                  }
                 },
                 indicatorColor: const Color(0XFFC4B2AE),
                 backgroundColor: const Color(0xff4e4745)),

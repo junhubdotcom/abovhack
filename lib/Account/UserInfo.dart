@@ -310,13 +310,7 @@ class UserInfoState extends State<UserInfo> {
                             fontWeight: FontWeight.bold,
                             color: Color(0XFF14181B),
                           )),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: ((context) => AccountSummary())),
-                        );
-                      },
+                      onPressed: () => Navigator.of(context).pop(),
                     )
                   ],
                 ))));
