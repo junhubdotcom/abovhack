@@ -1,7 +1,3 @@
-import 'package:abovhack/Account/AccountSummary.dart';
-import 'package:abovhack/Camera/ResultScreen.dart';
-import 'package:abovhack/Education/screens/education_home.dart';
-import 'package:abovhack/SocialMedia/SocialMediaHomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:abovhack/HomePage.dart';
 
