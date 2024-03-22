@@ -34,16 +34,14 @@ class _EducationHomeState extends State<EducationHome> {
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
-            Container(
-              color: Color(0xffff9973),
-              child: ProfileSection(
-                xp: xp,
-                maxXp: maxXp,
-              ),
+            ProfileSection(
+              xp: xp,
+              maxXp: maxXp,
             ),
-            const Divider(
-              thickness: 1,
-            ),
+
+            // const Divider(
+            //   thickness: 1,
+            // ),
             const Padding(
               padding: EdgeInsets.all(20),
               child: TradeCard(),
@@ -98,7 +96,7 @@ class ProfileSection extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white),
+                        color: Colors.black),
                   ),
                   const SizedBox(
                     height: 10,
@@ -109,8 +107,9 @@ class ProfileSection extends StatelessWidget {
                       const Text(
                         'Level 1: ',
                         style: TextStyle(
-                          fontSize: 16,
-                        ),
+                            fontSize: 16,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w700),
                       ),
                       // Modify your progress bar here
                       Expanded(
@@ -133,13 +132,16 @@ class ProfileSection extends StatelessWidget {
                       Text(
                         '${xp.toInt()}/',
                         style: const TextStyle(
-                          fontSize: 12,
-                        ),
+                            fontSize: 12,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w700),
                       ),
                       Text(
                         '${maxXp.toInt()}',
                         style: const TextStyle(
                           fontSize: 12,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w700,
                         ),
                       ),
                     ],
@@ -248,7 +250,7 @@ class TradeCard extends StatelessWidget {
                             '4',
                             style: TextStyle(
                               fontFamily: 'Outfit',
-                              color: Color(0xFF14181B),
+                              color: Colors.deepOrange, //0xFF14181B
                               fontSize: 24,
                               fontWeight: FontWeight.w600,
                             ),
@@ -280,7 +282,7 @@ class TradeCard extends StatelessWidget {
                             '\$93,000',
                             style: TextStyle(
                               fontFamily: 'Outfit',
-                              color: Color(0xFF14181B),
+                              color: Colors.deepOrange,
                               fontSize: 24,
                               fontWeight: FontWeight.w600,
                             ),

@@ -21,7 +21,7 @@ class TopicCard extends StatelessWidget {
         );
       },
       child: Container(
-        width: 150, 
+        width: 150,
         height: 150,
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
@@ -32,19 +32,19 @@ class TopicCard extends StatelessWidget {
               color: Colors.black.withOpacity(.2),
               blurRadius: 4.0,
               spreadRadius: .05,
-            ), 
+            ),
           ],
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(topic.icon, size: 50), 
-            const SizedBox(height: 15), 
+            Icon(topic.icon, size: 50),
+            const SizedBox(height: 15),
             Text(
               topic.name,
               style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
-              maxLines: 2, 
+              maxLines: 2,
               overflow: TextOverflow.ellipsis,
             ),
           ],

@@ -8,7 +8,11 @@ class LessonPage extends StatefulWidget {
   final int initialLessonIndex;
   final VoidCallback? onLessonCompletion;
 
-  const LessonPage({super.key, required this.subtopic, required this.initialLessonIndex, this.onLessonCompletion});
+  const LessonPage(
+      {super.key,
+      required this.subtopic,
+      required this.initialLessonIndex,
+      this.onLessonCompletion});
 
   @override
   _LessonPageState createState() => _LessonPageState();
@@ -26,6 +30,7 @@ class _LessonPageState extends State<LessonPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xfffff3f3),
       appBar: AppBar(
         title: Text(widget.subtopic.lessons[currentLessonIndex].name),
       ),
@@ -38,7 +43,7 @@ class _LessonPageState extends State<LessonPage> {
             Expanded(
               child: PageView.builder(
                 itemCount: widget.subtopic.lessons.length,
-                controller: PageController(initialPage: currentLessonIndex), 
+                controller: PageController(initialPage: currentLessonIndex),
                 onPageChanged: (index) {
                   setState(() {
                     currentLessonIndex = index;
@@ -51,7 +56,8 @@ class _LessonPageState extends State<LessonPage> {
                       children: [
                         Text(
                           widget.subtopic.lessons[index].name,
-                          style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                          style: const TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.w600),
                         ),
                         Text(
                           widget.subtopic.lessons[index].content,
@@ -61,16 +67,22 @@ class _LessonPageState extends State<LessonPage> {
                         ElevatedButton(
                           onPressed: () {
                             setState(() {
-                              widget.subtopic.lessons[index].toggleCompletionStatus();
+                              widget.subtopic.lessons[index]
+                                  .toggleCompletionStatus();
                             });
                             if (widget.onLessonCompletion != null) {
                               widget.onLessonCompletion!();
                             }
                           },
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: widget.subtopic.lessons[index].isCompleted ? Colors.green : null,
+                            backgroundColor:
+                                widget.subtopic.lessons[index].isCompleted
+                                    ? Colors.green
+                                    : null,
                           ),
-                          child: Text(widget.subtopic.lessons[index].isCompleted ? 'Completed!' : 'Mark as Completed'),
+                          child: Text(widget.subtopic.lessons[index].isCompleted
+                              ? 'Completed!'
+                              : 'Mark as Completed'),
                         ),
                       ],
                     ),
@@ -99,7 +111,9 @@ class _LessonPageState extends State<LessonPage> {
                   height: index == currentLessonIndex ? 16 : 8,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: widget.subtopic.lessons[index].isCompleted ? Colors.green : Colors.grey,
+                    color: widget.subtopic.lessons[index].isCompleted
+                        ? Colors.green
+                        : Colors.grey,
                   ),
                 ),
               ),

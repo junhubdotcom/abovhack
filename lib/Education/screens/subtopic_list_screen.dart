@@ -18,6 +18,7 @@ class _SubtopicListScreenState extends State<SubtopicListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xfffff3f3),
       appBar: AppBar(
         title: Text(widget.topic.name),
       ),
@@ -32,8 +33,11 @@ class _SubtopicListScreenState extends State<SubtopicListScreen> {
                 GestureDetector(
                   onTap: () {
                     int initialLessonIndex = 0;
-                    for (int i = 0; i < widget.topic.subtopics[index].lessons.length; i++) {
-                      if (!widget.topic.subtopics[index].lessons[i].isCompleted) {
+                    for (int i = 0;
+                        i < widget.topic.subtopics[index].lessons.length;
+                        i++) {
+                      if (!widget
+                          .topic.subtopics[index].lessons[i].isCompleted) {
                         initialLessonIndex = i;
                         break;
                       }
@@ -45,7 +49,7 @@ class _SubtopicListScreenState extends State<SubtopicListScreen> {
                           subtopic: widget.topic.subtopics[index],
                           initialLessonIndex: initialLessonIndex,
                           onLessonCompletion: () {
-                            setState(() {}); 
+                            setState(() {});
                           },
                         ),
                       ),
@@ -53,7 +57,8 @@ class _SubtopicListScreenState extends State<SubtopicListScreen> {
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(20),
-                    child: SubtopicCard(subtopic: widget.topic.subtopics[index]),
+                    child:
+                        SubtopicCard(subtopic: widget.topic.subtopics[index]),
                   ),
                 ),
               ],

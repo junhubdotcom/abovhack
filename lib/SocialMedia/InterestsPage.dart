@@ -8,14 +8,14 @@ class InterestsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, size: 35.0, color: Color(0XFFFF9973)),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-      ),
+      // appBar: AppBar(
+      //   leading: IconButton(
+      //     icon: const Icon(Icons.arrow_back, size: 35.0, color: Color(0XFFFF9973)),
+      //     onPressed: () {
+      //       Navigator.pop(context);
+      //     },
+      //   ),
+      // ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(left: 35, right: 35),
@@ -186,10 +186,11 @@ class InterestsPage extends StatelessWidget {
                     const SizedBox(height: 50),
                     ElevatedButton(
                       onPressed: () {
-                        Navigator.push(
+                        Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                              builder: ((context) => const SocialMediaHomePage())),
+                              builder: (context) =>
+                                  const SocialMediaHomePage()),
                         );
                       },
                       child: const Text(

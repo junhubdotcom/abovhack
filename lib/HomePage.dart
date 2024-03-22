@@ -2,6 +2,7 @@ import 'package:abovhack/Account/CreateFund.dart';
 import 'package:abovhack/Account/ListOfFund.dart';
 import 'package:abovhack/Account/SummaryPage.dart';
 import 'package:abovhack/Camera/CameraPage.dart';
+import 'package:abovhack/SocialMedia/InterestsPage.dart';
 import 'package:flutter/material.dart';
 import 'package:abovhack/Account/AccountSummary.dart';
 import 'package:abovhack/Education/screens/education_home.dart';
@@ -12,6 +13,7 @@ import 'package:abovhack/SocialMedia/Community.dart';
 import 'package:abovhack/SocialMedia/PostingPage.dart';
 import 'package:abovhack/SocialMedia/ProfilePage.dart';
 import 'package:abovhack/SocialMedia/ShortVideo.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -21,6 +23,7 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
+  bool isFirstView = true;
   int _selectedIndex = 0;
   final List<Widget> _pages = <Widget>[
     const SocialMediaHomePage(),
@@ -28,6 +31,23 @@ class HomePageState extends State<HomePage> {
     const FinancialCalendarPage(),
     const EducationHome(),
   ];
+
+  void initState() {
+    super.initState();
+    checkFirstView();
+  }
+
+  Future<void> checkFirstView() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    bool isFirstView = prefs.getBool('isFirstView') ?? true;
+    if (isFirstView) {
+      setState(() {
+        _selectedIndex =
+            0; // Change to the index of the page you want to show initially
+      });
+      await prefs.setBool('isFirstView', false); // Correct the parameter here
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -191,13 +211,16 @@ class HomePageState extends State<HomePage> {
   Widget? _buildBodyWidget(int index) {
     switch (index) {
       case 0:
-        return TabBarView(children: [
-          const SocialMediaHomePage(),
-          CommunityPage(),
-          const ShortVideoPage(),
-          const ProfilePage(),
-          const PostingPage(),
-        ]);
+        return isFirstView
+            ? InterestsPage()
+            : TabBarView(children: [
+                const SocialMediaHomePage(),
+                CommunityPage(),
+                const ShortVideoPage(),
+                const ProfilePage(),
+                const PostingPage(),
+              ]);
+
       case 1:
         return const TabBarView(children: [
           SummaryPage(),

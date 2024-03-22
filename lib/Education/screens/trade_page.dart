@@ -21,6 +21,7 @@ class _TradePageState extends State<TradePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffff9973),
       appBar: AppBar(
         title: const Text('Paper Trade Simulator'),
       ),
@@ -39,8 +40,7 @@ class _TradePageState extends State<TradePage> {
               itemCount: stocks.length,
               itemBuilder: (context, index) {
                 return GestureDetector(
-                  onTap: () {
-                  },
+                  onTap: () {},
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: SizedBox(
