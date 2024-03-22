@@ -2,7 +2,7 @@ import 'package:abovhack/Account/AccountSummary.dart';
 import 'package:abovhack/Camera/ResultScreen.dart';
 import 'package:abovhack/SocialMedia/SocialMediaHomePage.dart';
 import 'package:flutter/material.dart';
-import 'package:abovhack/SocialMedia/SocialMediaHomePage.dart';
+import 'package:abovhack/HomePage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'Financial Literacy App',
       debugShowCheckedModeBanner: false,
-      home: AccountSummary(),
+      home: HomePage(),
     );
   }
 }
