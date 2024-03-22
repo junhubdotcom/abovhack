@@ -20,15 +20,17 @@ class _SocialMediaHomePageState extends State<SocialMediaHomePage> {
   final String content2 =
       "Crafting a budget is a fundamental step towards enhancing financial skills and achieving financial stability. A well-designed budget serves as a roadmap, providing insights into income, expenses, and savings goals. Begin by listing all sources of income and categorizing expenses, including essentials like housing, utilities, groceries, and discretionary spending. Analyze past spending patterns to identify areas for potential savings and prioritize financial goals such as building an emergency fund, paying off debt, or investing for the future. Regularly tracking expenses and adjusting the budget as needed ensures accountability and helps maintain financial discipline. Embracing budgeting tools and apps can streamline the process and provide valuable insights into spending habits. Ultimately, mastering the art of budgeting empowers individuals to take control of their finances and work towards long-term financial success.";
 
+  int currentPageIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff4e4745),
+        backgroundColor: const Color(0xff4e4745),
         leading: Container(
           alignment: Alignment.centerLeft,
-          padding: EdgeInsets.only(left: 10.0),
-          child: Stack(
+          padding: const EdgeInsets.only(left: 10.0),
+          child: const Stack(
             children: [
               CircleAvatar(
                 backgroundImage: NetworkImage(
@@ -40,7 +42,7 @@ class _SocialMediaHomePageState extends State<SocialMediaHomePage> {
         ),
         title: Container(
           height: 40.0,
-          child: TextField(
+          child: const TextField(
             decoration: InputDecoration(
               fillColor: Color(0xff9c8e8b),
               border: OutlineInputBorder(
@@ -61,10 +63,10 @@ class _SocialMediaHomePageState extends State<SocialMediaHomePage> {
         actions: [
           Container(
             alignment: Alignment.centerRight,
-            padding: EdgeInsets.only(right: 10.0),
+            padding: const EdgeInsets.only(right: 10.0),
             child: IconButton(
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 Icons.chat,
                 size: 35.0,
                 color: Colors.white,
@@ -76,31 +78,31 @@ class _SocialMediaHomePageState extends State<SocialMediaHomePage> {
       body: Column(
         children: [
           Container(
-            color: Color(0xff4e4745),
+            color: const Color(0xff4e4745),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.add_to_photos,
+                  icon: const Icon(Icons.add_to_photos,
                       color: Colors.white, size: 30.0),
                 ),
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.article, color: Colors.white, size: 30.0),
+                  icon: const Icon(Icons.article, color: Colors.white, size: 30.0),
                 ),
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.people, color: Colors.white, size: 30.0),
+                  icon: const Icon(Icons.people, color: Colors.white, size: 30.0),
                 ),
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.video_collection,
+                  icon: const Icon(Icons.video_collection,
                       color: Colors.white, size: 30.0),
                 ),
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.person, color: Colors.white, size: 30.0),
+                  icon: const Icon(Icons.person, color: Colors.white, size: 30.0),
                 ),
               ],
             ),
@@ -117,15 +119,15 @@ class _SocialMediaHomePageState extends State<SocialMediaHomePage> {
                         //Post 1
                         Row(
                           children: [
-                            CircleAvatar(
+                            const CircleAvatar(
                               backgroundImage: NetworkImage(
                                   'https://previews.123rf.com/images/faizzaki/faizzaki1911/faizzaki191100094/134393786-young-asian-malay-man-at-the-office-building-wearing-suit-and-holding-bag.jpg'),
                             ),
-                            SizedBox(width: 10.0),
+                            const SizedBox(width: 10.0),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Row(
+                                const Row(
                                   children: [
                                     Text("Muhammad Jamir",
                                         style: TextStyle(
@@ -136,14 +138,14 @@ class _SocialMediaHomePageState extends State<SocialMediaHomePage> {
                                             fontSize: 8.0, color: Colors.grey)),
                                   ],
                                 ),
-                                SizedBox(height: 3.0),
+                                const SizedBox(height: 3.0),
                                 Container(
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10.0),
-                                    color: Color(0xffadd3ff),
+                                    color: const Color(0xffadd3ff),
                                   ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(
+                                  child: const Padding(
+                                    padding: EdgeInsets.only(
                                         top: 2.0,
                                         bottom: 2.0,
                                         left: 8.0,
@@ -156,10 +158,17 @@ class _SocialMediaHomePageState extends State<SocialMediaHomePage> {
                                 ),
                               ],
                             ),
-                            Spacer(),
+                            const Spacer(),
                             ElevatedButton(
                               onPressed: () {},
-                              child: Text(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color(0xffd9d9d9),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20.0),
+                                ),
+                                padding: const EdgeInsets.all(0.0),
+                              ),
+                              child: const Text(
                                 "Following",
                                 style: TextStyle(
                                   fontSize: 12.0,
@@ -167,19 +176,12 @@ class _SocialMediaHomePageState extends State<SocialMediaHomePage> {
                                   color: Colors.black,
                                 ),
                               ),
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Color(0xffd9d9d9),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20.0),
-                                ),
-                                padding: EdgeInsets.all(0.0),
-                              ),
                             ),
                           ],
                         ),
-                        SizedBox(height: 10.0),
+                        const SizedBox(height: 10.0),
 
-                        Text(
+                        const Text(
                           "The Basic of Building a Strong Investment Portfolio",
                           style: TextStyle(
                               fontSize: 25, fontWeight: FontWeight.bold),
@@ -191,45 +193,45 @@ class _SocialMediaHomePageState extends State<SocialMediaHomePage> {
                           trimMode: TrimMode.Line,
                           trimCollapsedText: 'More',
                           trimExpandedText: 'Less',
-                          moreStyle: TextStyle(
+                          moreStyle: const TextStyle(
                               fontSize: 14, fontWeight: FontWeight.bold),
                         ),
                         Row(
                           children: [
                             IconButton(
-                              icon: Icon(Icons.favorite_border_outlined),
+                              icon: const Icon(Icons.favorite_border_outlined),
                               onPressed: () {},
                             ),
                             IconButton(
-                              icon: Icon(Icons.comment_outlined),
+                              icon: const Icon(Icons.comment_outlined),
                               onPressed: () {},
                             ),
                             IconButton(
-                              icon: Icon(Icons.star_border_outlined),
+                              icon: const Icon(Icons.star_border_outlined),
                               onPressed: () {},
                             ),
                             IconButton(
-                              icon: Icon(Icons.share),
+                              icon: const Icon(Icons.share),
                               onPressed: () {},
                             ),
                           ],
                         ),
-                        Divider(
+                        const Divider(
                           color: Colors.grey,
                         ),
 
                         //Post 2
                         Row(
                           children: [
-                            CircleAvatar(
+                            const CircleAvatar(
                               backgroundImage: NetworkImage(
                                   'https://assets.skool.com/f/54d0a0a8a59d4087be8918b95634fef3/0156e70dd11d4ca0894a286ff1a59bfa828e6afeedce4ae8bd0377661e0c87bb'),
                             ),
-                            SizedBox(width: 10.0),
+                            const SizedBox(width: 10.0),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Row(
+                                const Row(
                                   children: [
                                     Text("Mark Tilbury",
                                         style: TextStyle(
@@ -252,14 +254,14 @@ class _SocialMediaHomePageState extends State<SocialMediaHomePage> {
                                             fontSize: 8.0, color: Colors.grey)),
                                   ],
                                 ),
-                                SizedBox(height: 3.0),
+                                const SizedBox(height: 3.0),
                                 Container(
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10.0),
-                                    color: Color(0xffadd3ff),
+                                    color: const Color(0xffadd3ff),
                                   ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(
+                                  child: const Padding(
+                                    padding: EdgeInsets.only(
                                         top: 2.0,
                                         bottom: 2.0,
                                         left: 8.0,
@@ -272,10 +274,17 @@ class _SocialMediaHomePageState extends State<SocialMediaHomePage> {
                                 ),
                               ],
                             ),
-                            Spacer(),
+                            const Spacer(),
                             ElevatedButton(
                               onPressed: () {},
-                              child: Text(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color(0xffd9d9d9),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20.0),
+                                ),
+                                padding: const EdgeInsets.all(0.0),
+                              ),
+                              child: const Text(
                                 "Following",
                                 style: TextStyle(
                                   fontSize: 11.0,
@@ -283,24 +292,17 @@ class _SocialMediaHomePageState extends State<SocialMediaHomePage> {
                                   color: Colors.black,
                                 ),
                               ),
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Color(0xffd9d9d9),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20.0),
-                                ),
-                                padding: EdgeInsets.all(0.0),
-                              ),
                             ),
                           ],
                         ),
-                        SizedBox(height: 10.0),
-                        Text(
+                        const SizedBox(height: 10.0),
+                        const Text(
                           "Explaining Investing In Plain English 📈 #investing #investingforbeginners #investing101",
                           style: TextStyle(
                               fontSize: 25, fontWeight: FontWeight.bold),
                         ),
 
-                        Stack(
+                        const Stack(
                           children: [
                             Image(
                                 image: NetworkImage(
@@ -319,46 +321,46 @@ class _SocialMediaHomePageState extends State<SocialMediaHomePage> {
                         Row(
                           children: [
                             IconButton(
-                              icon: Icon(Icons.favorite_border_outlined),
+                              icon: const Icon(Icons.favorite_border_outlined),
                               onPressed: () {},
                             ),
                             IconButton(
-                              icon: Icon(Icons.comment_outlined),
+                              icon: const Icon(Icons.comment_outlined),
                               onPressed: () {},
                             ),
                             IconButton(
-                              icon: Icon(Icons.star_border_outlined),
+                              icon: const Icon(Icons.star_border_outlined),
                               onPressed: () {},
                             ),
                             IconButton(
-                              icon: Icon(Icons.share),
+                              icon: const Icon(Icons.share),
                               onPressed: () {},
                             ),
                           ],
                         ),
-                        Divider(),
-                        SizedBox(height: 8.0),
-                        Text(
+                        const Divider(),
+                        const SizedBox(height: 8.0),
+                        const Text(
                           "Suggested for you",
                           style: TextStyle(
                               fontWeight: FontWeight.normal,
                               fontSize: 15.0,
                               color: Colors.black),
                         ),
-                        SizedBox(height: 5.0),
+                        const SizedBox(height: 5.0),
 
                         //Post 3
                         Row(
                           children: [
-                            CircleAvatar(
+                            const CircleAvatar(
                               backgroundImage: NetworkImage(
                                   'https://img.freepik.com/free-photo/young-asian-woman-standing-desk-office-with-crossed-arms_1098-20328.jpg'),
                             ),
-                            SizedBox(width: 10.0),
+                            const SizedBox(width: 10.0),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Row(
+                                const Row(
                                   children: [
                                     Text("Jessica Lau",
                                         style: TextStyle(
@@ -369,13 +371,13 @@ class _SocialMediaHomePageState extends State<SocialMediaHomePage> {
                                             fontSize: 8.0, color: Colors.grey)),
                                   ],
                                 ),
-                                SizedBox(height: 3.0),
+                                const SizedBox(height: 3.0),
                                 Container(
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(10.0),
                                       color: Colors.purple.shade100),
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(
+                                  child: const Padding(
+                                    padding: EdgeInsets.only(
                                         top: 2.0,
                                         bottom: 2.0,
                                         left: 8.0,
@@ -388,10 +390,17 @@ class _SocialMediaHomePageState extends State<SocialMediaHomePage> {
                                 ),
                               ],
                             ),
-                            Spacer(),
+                            const Spacer(),
                             ElevatedButton(
                               onPressed: () {},
-                              child: Text(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color(0xff7ecfe0),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20.0),
+                                ),
+                                padding: const EdgeInsets.all(0.0),
+                              ),
+                              child: const Text(
                                 "Follow",
                                 style: TextStyle(
                                   fontSize: 12.0,
@@ -399,22 +408,15 @@ class _SocialMediaHomePageState extends State<SocialMediaHomePage> {
                                   color: Colors.white,
                                 ),
                               ),
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Color(0xff7ecfe0),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20.0),
-                                ),
-                                padding: EdgeInsets.all(0.0),
-                              ),
                             ),
                           ],
                         ),
-                        Text(
+                        const Text(
                           "Mastering Financial Discipline: The Importance of Creating a Budget",
                           style: TextStyle(
                               fontSize: 25, fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(height: 5.0),
+                        const SizedBox(height: 5.0),
                         ReadMoreText(
                           content2,
                           trimLines: 6,
@@ -422,25 +424,25 @@ class _SocialMediaHomePageState extends State<SocialMediaHomePage> {
                           trimMode: TrimMode.Line,
                           trimCollapsedText: 'More',
                           trimExpandedText: 'Less',
-                          moreStyle: TextStyle(
+                          moreStyle: const TextStyle(
                               fontSize: 14, fontWeight: FontWeight.bold),
                         ),
                         Row(
                           children: [
                             IconButton(
-                              icon: Icon(Icons.favorite_border_outlined),
+                              icon: const Icon(Icons.favorite_border_outlined),
                               onPressed: () {},
                             ),
                             IconButton(
-                              icon: Icon(Icons.comment_outlined),
+                              icon: const Icon(Icons.comment_outlined),
                               onPressed: () {},
                             ),
                             IconButton(
-                              icon: Icon(Icons.star_border_outlined),
+                              icon: const Icon(Icons.star_border_outlined),
                               onPressed: () {},
                             ),
                             IconButton(
-                              icon: Icon(Icons.share),
+                              icon: const Icon(Icons.share),
                               onPressed: () {},
                             ),
                           ],
@@ -454,32 +456,42 @@ class _SocialMediaHomePageState extends State<SocialMediaHomePage> {
           ),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: Color(0xff4e4745),
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.white,
-        selectedLabelStyle: TextStyle(color: Colors.white),
-        unselectedLabelStyle: TextStyle(color: Colors.white),
-        iconSize: 30.0,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.book),
-            label: 'Education',
+      bottomNavigationBar: NavigationBarTheme(
+        data: NavigationBarThemeData(
+          labelTextStyle: MaterialStateProperty.resolveWith<TextStyle>(
+            (Set<MaterialState> states) => states.contains(MaterialState.selected)
+                ? const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)
+                : const TextStyle(color: Colors.white),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.account_balance_wallet),
-            label: 'Account',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_month),
-            label: 'Calendar',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.mark_chat_unread),
-            label: 'Social Media',
-          ),
-        ],
+        ),
+        child: NavigationBar(
+          destinations: const [
+            NavigationDestination(
+              icon: Icon(Icons.book, color: Colors.white),
+              label: 'Education',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.account_balance_wallet, color: Colors.white),
+              label: 'Account',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.calendar_month, color: Colors.white),
+              label: 'Calendar',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.mark_chat_unread, color: Colors.white),
+              label: 'Social Media',
+            )
+          ],
+          selectedIndex: currentPageIndex,
+          onDestinationSelected: (int index) {
+            setState(() {
+              currentPageIndex = index;
+            });
+          },
+          indicatorColor: const Color(0XFFC4B2AE),
+          backgroundColor: const Color(0xff4e4745)
+        ),
       ),
     );
   }
