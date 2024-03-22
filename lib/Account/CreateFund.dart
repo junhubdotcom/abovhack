@@ -135,14 +135,7 @@ class CreateFundState extends State<CreateFund> {
                                                       color: Colors.white,
                                                       fontFamily:
                                                           'Readex Pro')),
-                                              onPressed: () {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: ((context) =>
-                                                          UserInfo())),
-                                                );
-                                              },
+                                              onPressed: () {}
                                             ))
                                       ],
                                     ))))
