@@ -5,10 +5,9 @@ import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart
 import 'package:permission_handler/permission_handler.dart';
 import 'package:camera/camera.dart';
 
-
 class CameraPage extends StatelessWidget {
   const CameraPage({super.key});
-  
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,12 +23,12 @@ class CameraPage extends StatelessWidget {
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
-  
+
   @override
   State<MainScreen> createState() => _MainScreenState();
 }
 
-class _MainScreenState extends State<MainScreen> with WidgetsBindingObserver{
+class _MainScreenState extends State<MainScreen> with WidgetsBindingObserver {
   bool _isPermissionGranted = false;
 
   late final Future<void> _future;
@@ -49,35 +48,35 @@ class _MainScreenState extends State<MainScreen> with WidgetsBindingObserver{
 
   // We should stop the camera once this widget is disposed
   @override
-  void dispose(){
+  void dispose() {
     WidgetsBinding.instance.removeObserver(this);
     _stopCamera();
     textRecognizer.close();
     super.dispose();
   }
-  
+
   // Starts and stops the camera according to the lifecycle of the app
   @override
-  void didChangeAppLifecycleState(AppLifecycleState state){
-    if (_cameraController == null || !_cameraController!.value.isInitialized){
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (_cameraController == null || !_cameraController!.value.isInitialized) {
       return;
     }
 
-    if(state == AppLifecycleState.inactive){
+    if (state == AppLifecycleState.inactive) {
       _stopCamera();
-    } else if(state == AppLifecycleState.resumed &&
-      _cameraController != null && _cameraController!.value.isInitialized){
+    } else if (state == AppLifecycleState.resumed &&
+        _cameraController != null &&
+        _cameraController!.value.isInitialized) {
       _startCamera();
     }
   }
 
   @override
-   Widget build(BuildContext context) {
+  Widget build(BuildContext context) {
     return FutureBuilder(
       future: _future,
       builder: (context, snapshot) {
         return Stack(
-          
           children: [
             // Show the camera feed behind everything
             if (_isPermissionGranted)
@@ -93,11 +92,57 @@ class _MainScreenState extends State<MainScreen> with WidgetsBindingObserver{
                   }
                 },
               ),
-              
+
             Scaffold(
               appBar: AppBar(
-                
-                title: const Text('Text Recognition Sample'),
+                backgroundColor: Color(0xff4e4745),
+                leading: Container(
+                  alignment: Alignment.centerLeft,
+                  padding: EdgeInsets.only(left: 10.0),
+                  child: Stack(
+                    children: [
+                      CircleAvatar(
+                        backgroundImage: NetworkImage(
+                            'https://storage.googleapis.com/pai-images/58286c435ac54f078f246c3e9cc14c1d.jpeg'),
+                        radius: 23.0,
+                      ),
+                    ],
+                  ),
+                ),
+                title: Container(
+                  height: 40.0,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      fillColor: Color(0xff9c8e8b),
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.white,
+                        ),
+                      ),
+                      hintText: "Search",
+                      hintStyle: TextStyle(color: Colors.white),
+                      prefixIcon: Icon(
+                        Icons.search,
+                        color: Colors.white,
+                      ),
+                      contentPadding: EdgeInsets.all(10.0),
+                    ),
+                  ),
+                ),
+                actions: [
+                  Container(
+                    alignment: Alignment.centerRight,
+                    padding: EdgeInsets.only(right: 10.0),
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.chat,
+                        size: 35.0,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ],
               ),
               // Set the background to transparent so you can see the camera preview
               backgroundColor: _isPermissionGranted ? Colors.transparent : null,
@@ -112,7 +157,7 @@ class _MainScreenState extends State<MainScreen> with WidgetsBindingObserver{
                           child: Center(
                             child: ElevatedButton(
                               child: Text('Scan text'),
-                              onPressed: _scanImage,    
+                              onPressed: _scanImage,
                             ),
                           ),
                         ),
@@ -139,14 +184,14 @@ class _MainScreenState extends State<MainScreen> with WidgetsBindingObserver{
     _isPermissionGranted = status == PermissionStatus.granted;
   }
 
-  void _startCamera(){
-    if (_cameraController !=null){
-      _cameraSelected(_cameraController!.description);  
+  void _startCamera() {
+    if (_cameraController != null) {
+      _cameraSelected(_cameraController!.description);
     }
   }
 
-  void _stopCamera(){
-    if (_cameraController != null){
+  void _stopCamera() {
+    if (_cameraController != null) {
       _cameraController!.dispose();
       _cameraController = null;
     }
@@ -172,47 +217,46 @@ class _MainScreenState extends State<MainScreen> with WidgetsBindingObserver{
     }
   }
 
-      Future<void> _cameraSelected(CameraDescription camera) async {
-      _cameraController = CameraController(
-        camera,
-        ResolutionPreset.max,
-        enableAudio: false,
-      );
+  Future<void> _cameraSelected(CameraDescription camera) async {
+    _cameraController = CameraController(
+      camera,
+      ResolutionPreset.max,
+      enableAudio: false,
+    );
 
-      await _cameraController!.initialize();
+    await _cameraController!.initialize();
 
-      if (!mounted) {
-        return;
-      }
-      setState(() {});
+    if (!mounted) {
+      return;
     }
+    setState(() {});
+  }
 
-    Future<void> _scanImage() async {
-  if (_cameraController == null) return;
+  Future<void> _scanImage() async {
+    if (_cameraController == null) return;
 
-  final navigator = Navigator.of(context);
+    final navigator = Navigator.of(context);
 
-  try {
-    final pictureFile = await _cameraController!.takePicture();
+    try {
+      final pictureFile = await _cameraController!.takePicture();
 
-    final file = File(pictureFile.path);
+      final file = File(pictureFile.path);
 
-    final inputImage = InputImage.fromFile(file);
-    final recognizedText = await textRecognizer.processImage(inputImage);
+      final inputImage = InputImage.fromFile(file);
+      final recognizedText = await textRecognizer.processImage(inputImage);
 
-    await navigator.push(
-      MaterialPageRoute(
-        builder: (BuildContext context) =>
-            ResultScreen(text: recognizedText.text),
-      ),
-    );
-  } catch (e) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('An error occurred when scanning text'),
-      ),
-    );
+      await navigator.push(
+        MaterialPageRoute(
+          builder: (BuildContext context) =>
+              ResultScreen(text: recognizedText.text),
+        ),
+      );
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('An error occurred when scanning text'),
+        ),
+      );
+    }
   }
 }
-
-  }
