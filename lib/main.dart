@@ -1,5 +1,3 @@
-import 'package:abovhack/Camera/CameraPage.dart';
-import 'package:abovhack/SocialMedia/ChatPage.dart';
 import 'package:abovhack/SplashScreen.dart';
 import 'package:flutter/material.dart';
 

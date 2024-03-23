@@ -6,7 +6,9 @@ class SubtopicCard extends StatefulWidget {
   final Subtopic subtopic;
   final VoidCallback? onLessonCompletion;
 
-  const SubtopicCard({Key? key, required this.subtopic, this.onLessonCompletion}) : super(key: key);
+  const SubtopicCard(
+      {Key? key, required this.subtopic, this.onLessonCompletion})
+      : super(key: key);
 
   @override
   _SubtopicCardState createState() => _SubtopicCardState();
@@ -56,7 +58,8 @@ class _SubtopicCardState extends State<SubtopicCard> {
                   Expanded(
                     child: Text(
                       widget.subtopic.name,
-                      style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      style: const TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ],
@@ -65,15 +68,20 @@ class _SubtopicCardState extends State<SubtopicCard> {
               LinearProgressIndicator(
                 value: _calculateProgress(widget.subtopic),
                 backgroundColor: Colors.grey[300],
-                valueColor: const AlwaysStoppedAnimation<Color>(Colors.lightGreen),
+                valueColor:
+                    const AlwaysStoppedAnimation<Color>(Colors.lightGreen),
               ),
               const SizedBox(height: 10),
               Center(
                 child: Text(
-                  _isSubtopicCompleted(widget.subtopic) ? 'Completed!' : 'In Progress',
+                  _isSubtopicCompleted(widget.subtopic)
+                      ? 'Completed!'
+                      : 'In Progress',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: _isSubtopicCompleted(widget.subtopic) ? Colors.green : Colors.grey,
+                    color: _isSubtopicCompleted(widget.subtopic)
+                        ? Colors.green
+                        : Colors.grey,
                   ),
                 ),
               ),
@@ -104,7 +112,8 @@ class _SubtopicCardState extends State<SubtopicCard> {
   }
 
   double _calculateProgress(Subtopic subtopic) {
-    int completedCount = subtopic.lessons.where((lesson) => lesson.isCompleted).length;
+    int completedCount =
+        subtopic.lessons.where((lesson) => lesson.isCompleted).length;
     return completedCount / subtopic.lessons.length;
   }
 
@@ -115,22 +124,26 @@ class _SubtopicCardState extends State<SubtopicCard> {
 
 class LessonListItem extends StatelessWidget {
   final Lesson lesson;
-  final Subtopic subtopic; // Add reference to the parent Subtopic
+  final Subtopic subtopic;
   final VoidCallback? onCompletionChanged;
 
-  const LessonListItem({Key? key, required this.lesson, required this.subtopic, this.onCompletionChanged}) : super(key: key);
+  const LessonListItem(
+      {Key? key,
+      required this.lesson,
+      required this.subtopic,
+      this.onCompletionChanged})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
       onTap: () {
-        // Navigate to the lesson page when tapped
         Navigator.push(
           context,
           MaterialPageRoute(
             builder: (context) => LessonPage(
-              subtopic: subtopic, // Pass the parent Subtopic
-              initialLessonIndex: subtopic.lessons.indexOf(lesson), // Use the lesson index in the parent Subtopic
+              subtopic: subtopic,
+              initialLessonIndex: subtopic.lessons.indexOf(lesson),
               onLessonCompletion: () {
                 if (onCompletionChanged != null) {
                   onCompletionChanged!();
