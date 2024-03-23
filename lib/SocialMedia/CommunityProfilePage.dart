@@ -17,50 +17,7 @@ class CommunityProfilePage extends StatelessWidget {
             Navigator.pop(context);
           },
         ),
-      ),/*
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.add, size: 35.0, color: Color(0XFFFF9973)),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: ((context) => const PostingPage())),
-              );
-            },
-          ),
-          IconButton(
-            icon: const Icon(Icons.search, size: 35.0, color: Color(0XFFFF9973)),
-            onPressed: () {
-              // Handle search button tap
-            },
-          ),
-          GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: ((context) => const ProfilePage())),
-              );
-            },
-            child: const Stack(
-              children: [
-                CircleAvatar(
-                  backgroundImage: NetworkImage(
-                      'https://storage.googleapis.com/pai-images/58286c435ac54f078f246c3e9cc14c1d.jpeg'),
-                  radius: 23.0,
-                ),
-                Positioned(
-                  left: 3.0,
-                  bottom: 0.0,
-                  child: CircleAvatar(
-                    backgroundColor: Colors.green,
-                    radius: 6.0,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),*/
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
