@@ -22,6 +22,8 @@ dependencies:
   easy_debounce: ^2.0.0
   multi_chip_picker: ^0.0.4
   shared_preferences: ^2.2.2
+  get: ^4.6.6
+  
 
 
 dev_dependencies:
