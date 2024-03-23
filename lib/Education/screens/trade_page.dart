@@ -1,7 +1,8 @@
 // ignore_for_file: library_private_types_in_public_api
 
 import 'package:abovhack/Education/models/stocks.dart';
-import 'package:abovhack/Education/widgets/trade_chart.dart';
+import 'package:abovhack/Education/widgets/new_trade_chart.dart';
+import 'package:abovhack/Education/widgets/deprecated_trade_chart.dart';
 import 'package:flutter/material.dart';
 
 class TradePage extends StatefulWidget {
@@ -64,7 +65,7 @@ class _TradePageState extends State<TradePage> {
           const SizedBox(height: 10),
           Expanded(
             child:
-                Container(color: Colors.grey[300], child: const TradeChart()),
+                Container(color: Colors.grey[300], child: NewTradeChart(title: 'AAPL')),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 20),

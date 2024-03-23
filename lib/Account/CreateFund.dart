@@ -1,4 +1,3 @@
-import 'package:abovhack/Account/UserInfo.dart';
 import 'package:flutter/material.dart';
 
 class CreateFund extends StatefulWidget {

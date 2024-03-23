@@ -20,15 +20,6 @@ class _EducationHomeState extends State<EducationHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xfffff3f3),
-      // appBar: AppBar(
-      //   automaticallyImplyLeading: false,
-      //   title: const Text(
-      //     'Finance App',
-      //   ),
-      //   actions: const [],
-      //   centerTitle: false,
-      //   elevation: 2,
-      // ),
       body: SafeArea(
         top: true,
         child: Column(
@@ -38,10 +29,6 @@ class _EducationHomeState extends State<EducationHome> {
               xp: xp,
               maxXp: maxXp,
             ),
-
-            // const Divider(
-            //   thickness: 1,
-            // ),
             const Padding(
               padding: EdgeInsets.all(20),
               child: TradeCard(),
@@ -82,8 +69,7 @@ class ProfileSection extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          const SizedBox(
-              width: 20), // Add some spacing between profile pic and text
+          const SizedBox(width: 20),
           Flexible(
             child: Align(
               alignment: const AlignmentDirectional(0, 0),
@@ -100,8 +86,7 @@ class ProfileSection extends StatelessWidget {
                   ),
                   const SizedBox(
                     height: 10,
-                  ), // Add some spacing between name and level
-                  // Level and progress bar
+                  ),
                   Row(
                     children: [
                       const Text(
@@ -111,7 +96,6 @@ class ProfileSection extends StatelessWidget {
                             color: Colors.black,
                             fontWeight: FontWeight.w700),
                       ),
-                      // Modify your progress bar here
                       Expanded(
                         child: LinearProgressIndicator(
                           value: xp / maxXp,
@@ -125,7 +109,7 @@ class ProfileSection extends StatelessWidget {
                   ),
                   const SizedBox(
                     height: 4,
-                  ), // Add some spacing between progress bar and balance
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
