@@ -1,12 +1,10 @@
 import 'package:abovhack/HomePage.dart';
 import 'package:abovhack/SocialMedia/Customise%20Widget/listOfInterest.dart';
-import 'package:abovhack/SocialMedia/SocialMediaHomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:get/get.dart';
 
 class InterestsPage extends StatefulWidget {
-  const InterestsPage({Key? key});
+  const InterestsPage({super.key});
 
   @override
   State<InterestsPage> createState() => _InterestsPageState();
@@ -206,8 +204,7 @@ class _InterestsPageState extends State<InterestsPage> {
                       },
                       child: const Text(
                         "Continue",
-                        style: TextStyle(
-                            color: Colors.blueGrey.shade400, fontSize: 18.0),
+                        style: TextStyle(color: Colors.white, fontSize: 18.0),
                       ),
                       style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xff7ecfe0),
