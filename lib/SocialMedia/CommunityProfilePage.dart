@@ -9,13 +9,15 @@ class CommunityProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0XFFFFF3F3),
-      /*appBar: AppBar(
+      appBar: AppBar(
+        backgroundColor: const Color(0xff4e4745),
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, size: 35.0, color: Color(0XFFFF9973)),
+          icon: const Icon(Icons.arrow_back, size: 35.0, color: Colors.white),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
+      ),/*
         actions: [
           IconButton(
             icon: const Icon(Icons.add, size: 35.0, color: Color(0XFFFF9973)),
