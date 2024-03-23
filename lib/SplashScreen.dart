@@ -46,7 +46,7 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             CircleAvatar(
               radius: 50.0,
-              child: Icon(Icons.local_activity),
+              child: Image(image: AssetImage('assets/Cowise.png'))
             ),
             Padding(
               padding: EdgeInsets.all(8.0),
