@@ -21,7 +21,9 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => HomePageState();
 }
 
-class HomePageState extends State<HomePage> {
+class HomePageState extends State<HomePage> with TickerProviderStateMixin{
+  late TabController _tabController;
+
   bool _isFirst = true;
   bool isFirstView = true;
 
@@ -32,6 +34,18 @@ class HomePageState extends State<HomePage> {
     const FinancialCalendarPage(),
     const EducationHome(),
   ];
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 5, vsync: this);
+  }
+
+ @override
+ void dispose() {
+   _tabController.dispose();
+   super.dispose();
+ }
 
   // void initState() {
   //   super.initState();
@@ -127,7 +141,8 @@ class HomePageState extends State<HomePage> {
                 selectedIndex: _selectedIndex,
                 onDestinationSelected: (int index) {
                   setState(() => _selectedIndex = index);
-                  if (_isFirst) {
+                  _tabController.animateTo(0);
+                  if (index==1 && _isFirst) {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -179,11 +194,12 @@ class HomePageState extends State<HomePage> {
   PreferredSizeWidget? _buildTabBarWidget(int index) {
     switch (index) {
       case 0:
-        return const TabBar(
-            indicatorColor: Color(0XFFFF9973),
+        return TabBar(
+            controller: _tabController,
+            indicatorColor: const Color(0XFFFF9973),
             indicatorSize: TabBarIndicatorSize.tab,
             indicatorWeight: 3,
-            tabs: [
+            tabs: const [
               Tab(icon: Icon(Icons.article, color: Colors.white, size: 30.0)),
               Tab(icon: Icon(Icons.people, color: Colors.white, size: 30.0)),
               Tab(
@@ -195,11 +211,12 @@ class HomePageState extends State<HomePage> {
                       color: Colors.white, size: 30.0)),
             ]);
       case 1:
-        return const TabBar(
-            indicatorColor: Color(0XFFFF9973),
+        return TabBar(
+            controller: _tabController,
+            indicatorColor: const Color(0XFFFF9973),
             indicatorSize: TabBarIndicatorSize.tab,
             indicatorWeight: 3,
-            tabs: [
+            tabs: const [
               Tab(
                   icon: Icon(Icons.lightbulb_rounded,
                       color: Colors.white, size: 30.0)),
@@ -220,7 +237,7 @@ class HomePageState extends State<HomePage> {
   Widget? _buildBodyWidget(int index) {
     switch (index) {
       case 0:
-        return TabBarView(children: [
+        return TabBarView(controller: _tabController, children: [
           const SocialMediaHomePage(),
           CommunityPage(),
           const ShortVideoPage(),
@@ -229,7 +246,7 @@ class HomePageState extends State<HomePage> {
         ]);
 
       case 1:
-        return const TabBarView(children: [
+        return TabBarView(controller: _tabController, children: const [
           SummaryPage(),
           ListOfFund(),
           CameraPage(),
