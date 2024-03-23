@@ -6,6 +6,7 @@ class FinancialCalendarPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0XFFFFF3F3),
       body: Column(
         children: [
           Container(

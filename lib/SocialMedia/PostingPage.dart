@@ -26,6 +26,7 @@ class _PostingPageState extends State<PostingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0XFFFFF3F3),
       /*appBar: AppBar(
         leading: IconButton(
           icon: Icon(Icons.arrow_back, size: 35.0, color: Color(0XFFFF9973)),
