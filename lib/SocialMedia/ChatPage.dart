@@ -241,42 +241,6 @@ class ChatPage extends StatelessWidget {
           ),
         ),
       ),
-      /*bottomNavigationBar: BottomAppBar(
-        notchMargin: 10.0,
-        shape: const CircularNotchedRectangle(),
-        color: Colors.white,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.video_collection,
-                  size: 40.0, color: Color(0xffff9973)),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.people, size: 40.0, color: Color(0xffff9973)),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.chat, size: 40, color: Color(0xffff9973)),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.chat_bubble, size: 40, color: Color(0xffff9973)),
-            ),
-          ],
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: const Color(0xffff9973),
-        foregroundColor: Colors.white,
-        shape: const CircleBorder(),
-        child: const Icon(Icons.home),
-      ),*/
     );
   }
 }

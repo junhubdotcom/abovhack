@@ -57,86 +57,6 @@ class _CommunityPageState extends State<CommunityPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0XFFFFF3F3),
-      /*appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.search, size: 35.0, color: Color(0XFFFF9973)),
-          onPressed: () {},
-        ),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.add, size: 35.0, color: Color(0XFFFF9973)),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: ((context) => PostingPage())),
-              );
-            },
-          ),
-          IconButton(
-            icon: Icon(Icons.article, size: 35.0, color: Color(0XFFFF9973)),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: ((context) => SocialMediaHomePage())),
-              );
-            },
-          ),
-          IconButton(
-            icon: Icon(Icons.people, size: 35.0, color: Color(0XFFC4B2AE)),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: ((context) => CommunityPage())),
-              );
-            },
-          ),
-          IconButton(
-            icon: Icon(Icons.chat, size: 35.0, color: Color(0XFFFF9973)),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: ((context) => ChatPage())),
-              );
-            },
-          ),
-          IconButton(
-            icon: Icon(Icons.video_collection,
-                size: 35.0, color: Color(0XFFFF9973)),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: ((context) => ShortVideoPage())),
-              );
-            },
-          ),
-          GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: ((context) => ProfilePage())),
-              );
-            },
-            child: Stack(
-              children: [
-                CircleAvatar(
-                  backgroundImage: NetworkImage(
-                      'https://storage.googleapis.com/pai-images/58286c435ac54f078f246c3e9cc14c1d.jpeg'),
-                  radius: 23.0,
-                ),
-                Positioned(
-                  left: 3.0,
-                  bottom: 0.0,
-                  child: CircleAvatar(
-                    backgroundColor: Colors.green,
-                    radius: 6.0,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),*/
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -169,7 +89,8 @@ class _CommunityPageState extends State<CommunityPage> {
                                 borderRadius: BorderRadius.circular(24.0),
                                 color: Colors.white,
                                 border: Border.all(
-                                    color: const Color(0xffff9973), width: 10.0),
+                                    color: const Color(0xffff9973),
+                                    width: 10.0),
                               ),
                               child: Padding(
                                 padding: const EdgeInsets.all(10.0),
@@ -296,7 +217,8 @@ class _CommunityPageState extends State<CommunityPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: ((context) => const CommunityProfilePage())),
+                              builder: ((context) =>
+                                  const CommunityProfilePage())),
                         );
                       },
                       child: const CommunityCardJoined(
@@ -416,42 +338,6 @@ class _CommunityPageState extends State<CommunityPage> {
           ),
         ),
       ),
-      /*bottomNavigationBar: BottomAppBar(
-        notchMargin: 10.0,
-        shape: CircularNotchedRectangle(),
-        color: Colors.white,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.video_collection,
-                  size: 40.0, color: Color(0xffff9973)),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.people, size: 40.0, color: Color(0xffff9973)),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.chat, size: 40, color: Color(0xffff9973)),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.chat_bubble, size: 40, color: Color(0xffff9973)),
-            ),
-          ],
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.home),
-        backgroundColor: Color(0xffff9973),
-        foregroundColor: Colors.white,
-        shape: CircleBorder(),
-      ),*/
     );
   }
 }
@@ -493,8 +379,8 @@ class CommunityCardJoined extends StatelessWidget {
                   ),
                   Text(
                     communityName,
-                    style:
-                        const TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                        fontSize: 16.0, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 3.0),
                   Text(
@@ -561,8 +447,8 @@ class CommunityCardUnjoined extends StatelessWidget {
                   ),
                   Text(
                     communityName,
-                    style:
-                        const TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                        fontSize: 16.0, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 3.0),
                   Text(

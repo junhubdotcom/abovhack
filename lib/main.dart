@@ -1,4 +1,5 @@
 import 'package:abovhack/SplashScreen.dart';
+import 'package:abovhack/testing.dart';
 import 'package:flutter/material.dart';
 
 void main() {
