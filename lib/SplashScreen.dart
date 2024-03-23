@@ -38,7 +38,8 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
+      backgroundColor: const Color(0XFFFFF3F3),
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -46,10 +47,11 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             CircleAvatar(
               radius: 50.0,
-              child: Image(image: AssetImage('assets/Cowise.png'))
+              backgroundColor: Colors.white,
+              child: Image.asset('images/Cowise.png')
             ),
-            Padding(
-              padding: EdgeInsets.all(8.0),
+            const Padding(
+              padding: EdgeInsets.only(left: 8.0, right: 8.0, top: 20.0), 
               child: CircularProgressIndicator(
                 backgroundColor: Colors.white,
               ),
