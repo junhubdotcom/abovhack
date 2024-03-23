@@ -134,13 +134,7 @@ class _PostingPageState extends State<PostingPage> {
                 ],
               ),
               ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: ((context) => const SocialMediaHomePage())),
-                  );
-                },
+                onPressed: () {},
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xff7ecfe0),
                 ),
