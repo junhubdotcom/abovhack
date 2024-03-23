@@ -25,9 +25,9 @@ class _ShortVideoPageState extends State<ShortVideoPage> {
   void initState() {
     super.initState();
     controller = [
-      _controller1 = VideoPlayerController.asset('videos/vid1.mp4'),
-      _controller2 = VideoPlayerController.asset('videos/vid2.mp4'),
-      _controller3 = VideoPlayerController.asset('videos/vid3.mp4'),
+      _controller1 = VideoPlayerController.asset('videos/vid3.mp4'),
+      _controller2 = VideoPlayerController.asset('videos/vid1.mp4'),
+      _controller3 = VideoPlayerController.asset('videos/vid2.mp4'),
     ];
     initialize = [
       _initializeVideoPlayerFuture1 = _controller1.initialize(),
