@@ -3,7 +3,6 @@ import 'package:abovhack/Account/ListOfFund.dart';
 import 'package:abovhack/Account/SummaryPage.dart';
 import 'package:abovhack/Account/UserInfo.dart';
 import 'package:abovhack/Camera/CameraPage.dart';
-import 'package:abovhack/SocialMedia/InterestsPage.dart';
 import 'package:flutter/material.dart';
 import 'package:abovhack/Account/AccountSummary.dart';
 import 'package:abovhack/Education/screens/education_home.dart';
@@ -14,7 +13,6 @@ import 'package:abovhack/SocialMedia/Community.dart';
 import 'package:abovhack/SocialMedia/PostingPage.dart';
 import 'package:abovhack/SocialMedia/ProfilePage.dart';
 import 'package:abovhack/SocialMedia/ShortVideo.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

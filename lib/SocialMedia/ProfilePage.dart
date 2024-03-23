@@ -10,6 +10,7 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0XFFFFF3F3),
       /*appBar: AppBar(
         leading: IconButton(
           icon: Icon(Icons.search, size: 35.0, color: Color(0XFFFF9973)),

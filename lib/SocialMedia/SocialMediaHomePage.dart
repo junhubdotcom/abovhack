@@ -18,7 +18,8 @@ class _SocialMediaHomePageState extends State<SocialMediaHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Column(
+      backgroundColor: const Color(0XFFFFF3F3),
+      body: Column(
       children: [
         Expanded(
           child: SingleChildScrollView(

@@ -28,7 +28,7 @@ class CreateFundState extends State<CreateFund> {
                           height: 70,
                         ),
                         const Text(
-                          'ABO',
+                          'Cowise',
                           style: TextStyle(
                               fontSize: 36,
                               color: Colors.white,

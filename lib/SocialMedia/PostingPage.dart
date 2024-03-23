@@ -2,19 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:abovhack/SocialMedia/SocialMediaHomePage.dart';
 
 class PostingPage extends StatefulWidget {
-  const PostingPage({Key? key});
+  const PostingPage({super.key});
 
   @override
   State<PostingPage> createState() => _PostingPageState();
 }
 
 class _PostingPageState extends State<PostingPage> {
-  final postToList = [
-    'Public',
-    'Savings Squad',
-    'Financial Wizard',
-    'Money Master'
-  ];
+  final postToList = ['Public', 'InvestPro', 'Saving Squad', 'Budget Genius'];
 
   final postLabel = [
     'Financial Concept',
@@ -31,6 +26,7 @@ class _PostingPageState extends State<PostingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0XFFFFF3F3),
       /*appBar: AppBar(
         leading: IconButton(
           icon: Icon(Icons.arrow_back, size: 35.0, color: Color(0XFFFF9973)),
@@ -90,18 +86,18 @@ class _PostingPageState extends State<PostingPage> {
                       value: selectedPostLabelVal,
                       items: postLabel
                           .map((e) => DropdownMenuItem(
+                                value: e,
                                 child: Text(
                                   e,
                                   style: const TextStyle(
                                       fontSize: 15.0,
                                       fontWeight: FontWeight.normal),
                                 ),
-                                value: e,
                               ))
                           .toList(),
                       onChanged: (val) {
                         setState(() {
-                          selectedPostLabelVal = val as String?;
+                          selectedPostLabelVal = val;
                         });
                       },
                     ),
@@ -119,18 +115,18 @@ class _PostingPageState extends State<PostingPage> {
                       value: selectedPostToVal,
                       items: postToList
                           .map((e) => DropdownMenuItem(
+                                value: e,
                                 child: Text(
                                   e,
                                   style: const TextStyle(
                                       fontSize: 15.0,
                                       fontWeight: FontWeight.normal),
                                 ),
-                                value: e,
                               ))
                           .toList(),
                       onChanged: (val) {
                         setState(() {
-                          selectedPostToVal = val as String?;
+                          selectedPostToVal = val;
                         });
                       },
                     ),
@@ -145,15 +141,15 @@ class _PostingPageState extends State<PostingPage> {
                         builder: ((context) => const SocialMediaHomePage())),
                   );
                 },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xff7ecfe0),
+                ),
                 child: const Text(
                   "Post",
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
                       fontSize: 20.0),
-                ),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xff7ecfe0),
                 ),
               ),
             ],
