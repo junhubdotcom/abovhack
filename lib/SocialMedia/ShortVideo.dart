@@ -54,86 +54,6 @@ class _ShortVideoPageState extends State<ShortVideoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      /*appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.search, size: 35.0, color: Color(0XFFFF9973)),
-          onPressed: () {},
-        ),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.add, size: 35.0, color: Color(0XFFFF9973)),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: ((context) => PostingPage())),
-              );
-            },
-          ),
-          IconButton(
-            icon: Icon(Icons.article, size: 35.0, color: Color(0XFFFF9973)),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: ((context) => SocialMediaHomePage())),
-              );
-            },
-          ),
-          IconButton(
-            icon: Icon(Icons.people, size: 35.0, color: Color(0XFFFF9973)),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: ((context) => CommunityPage())),
-              );
-            },
-          ),
-          IconButton(
-            icon: Icon(Icons.chat, size: 35.0, color: Color(0XFFFF9973)),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: ((context) => ChatPage())),
-              );
-            },
-          ),
-          IconButton(
-            icon: Icon(Icons.video_collection,
-                size: 35.0, color: Color(0xffC4B2AE)),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: ((context) => ShortVideoPage())),
-              );
-            },
-          ),
-          GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: ((context) => ProfilePage())),
-              );
-            },
-            child: Stack(
-              children: [
-                CircleAvatar(
-                  backgroundImage: NetworkImage(
-                      'https://storage.googleapis.com/pai-images/58286c435ac54f078f246c3e9cc14c1d.jpeg'),
-                  radius: 23.0,
-                ),
-                Positioned(
-                  left: 3.0,
-                  bottom: 0.0,
-                  child: CircleAvatar(
-                    backgroundColor: Colors.green,
-                    radius: 6.0,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),*/
       //Make this image changable
       body: SafeArea(
         child: Stack(
@@ -152,12 +72,10 @@ class _ShortVideoPageState extends State<ShortVideoPage> {
                           children: [
                             const SizedBox(),
                             Row(
-                              mainAxisAlignment:
-                                  MainAxisAlignment.spaceBetween,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Column(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     const SizedBox(height: 70.0),
                                     Row(
@@ -196,8 +114,8 @@ class _ShortVideoPageState extends State<ShortVideoPage> {
                                           ),
                                           child: const Text(
                                             'Follow',
-                                            style: TextStyle(
-                                                color: Colors.black),
+                                            style:
+                                                TextStyle(color: Colors.black),
                                           ),
                                         ),
                                       ],
