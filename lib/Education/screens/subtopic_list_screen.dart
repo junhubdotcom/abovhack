@@ -18,7 +18,7 @@ class _SubtopicListScreenState extends State<SubtopicListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xfffff3f3),
+      backgroundColor: const Color(0xfffff3f3),
       appBar: AppBar(
         title: Text(widget.topic.name),
       ),

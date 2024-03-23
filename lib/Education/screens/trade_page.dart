@@ -21,7 +21,7 @@ class _TradePageState extends State<TradePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffff9973),
+      backgroundColor: const Color(0xffff9973),
       appBar: AppBar(
         title: const Text('Paper Trade Simulator'),
       ),

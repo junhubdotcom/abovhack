@@ -1,7 +1,5 @@
-import 'package:abovhack/SocialMedia/InterestsPage.dart';
 import 'package:abovhack/SplashScreen.dart';
 import 'package:flutter/material.dart';
-import 'package:abovhack/HomePage.dart';
 
 void main() {
   runApp(const MyApp());

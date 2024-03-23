@@ -1,9 +1,7 @@
 import 'dart:async';
-import 'dart:ffi';
 
 import 'package:abovhack/HomePage.dart';
 import 'package:abovhack/SocialMedia/InterestsPage.dart';
-import 'package:abovhack/SocialMedia/SocialMediaHomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -40,15 +38,15 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CircleAvatar(
-              child: Icon(Icons.local_activity),
               radius: 50.0,
+              child: Icon(Icons.local_activity),
             ),
             Padding(
               padding: EdgeInsets.all(8.0),
