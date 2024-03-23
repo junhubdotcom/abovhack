@@ -11,8 +11,41 @@ class ShortVideoPage extends StatefulWidget {
 }
 
 class _ShortVideoPageState extends State<ShortVideoPage> {
-  // VideoPlayerController _videoPlayerController;
-  // ChewieController _chewieController ;
+
+  late VideoPlayerController _controller1;
+  late VideoPlayerController _controller2;
+  late VideoPlayerController _controller3;
+  late Future<void> _initializeVideoPlayerFuture1;
+  late Future<void> _initializeVideoPlayerFuture2;
+  late Future<void> _initializeVideoPlayerFuture3;
+  List<VideoPlayerController> controller= [];
+  List<Future<void>> initialize = [];
+
+  @override
+  void initState() {
+    super.initState();
+    controller = [
+      _controller1 = VideoPlayerController.asset('videos/vid1.mp4'),
+      _controller2 = VideoPlayerController.asset('videos/vid2.mp4'),
+      _controller3 = VideoPlayerController.asset('videos/vid3.mp4'),
+    ];
+    initialize = [
+      _initializeVideoPlayerFuture1 = _controller1.initialize(),
+      _initializeVideoPlayerFuture2 = _controller2.initialize(),
+      _initializeVideoPlayerFuture3 = _controller3.initialize(),
+    ];
+    _controller1.setLooping(true);
+    _controller2.setLooping(true);
+    _controller3.setLooping(true);
+  }
+
+    @override
+  void dispose() {
+    _controller1.dispose();
+    _controller2.dispose();
+    _controller3.dispose();
+    super.dispose();
+  }
 
   List<String> listOfVideos = [
     'https://i.ytimg.com/vi/TOsOR48dQ78/maxres2.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AYwCgALgA4oCDAgAEAEYKyA8KH8wDw==&rs=AOn4CLD82RZr0Ib7g7RlEOMSkwgkJKigEA',
@@ -68,8 +101,21 @@ class _ShortVideoPageState extends State<ShortVideoPage> {
                   return Stack(
                     fit: StackFit.expand,
                     children: [
-                      Image.network(listOfVideos[index],
-                          fit: BoxFit.cover), // Adjusted the index
+                      FutureBuilder(
+                        future: initialize[index],
+                        builder: (context, snapshot) {
+                          if (snapshot.connectionState == ConnectionState.done) {
+                            return AspectRatio(
+                              aspectRatio: controller[index].value.aspectRatio,
+                              child: VideoPlayer(controller[index]),
+                            );
+                          } else {
+                            return const Center(
+                              child: CircularProgressIndicator(),
+                            );
+                          }
+                        },
+                      ),// Adjusted the index
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
