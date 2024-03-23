@@ -25,6 +25,7 @@ class HomePage extends StatefulWidget {
 
 class HomePageState extends State<HomePage> {
   bool _isFirst = true;
+  bool isFirstView = true;
 
   int _selectedIndex = 0;
   final List<Widget> _pages = <Widget>[

@@ -345,16 +345,18 @@ class LearnSection extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(height: 10),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
-          child: Row(
-            children: topics.map((topic) {
-              return Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                child: TopicCard(topic: topic),
-              );
-            }).toList(),
+          child: SizedBox(
+            height: 160,
+            child: Row(
+              children: topics.map((topic) {
+                return Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: TopicCard(topic: topic),
+                );
+              }).toList(),
+            ),
           ),
         ),
       ],
