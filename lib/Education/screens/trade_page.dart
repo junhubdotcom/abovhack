@@ -1,10 +1,9 @@
 import 'package:abovhack/Education/models/chart_data.dart';
 import 'package:abovhack/Education/models/stocks.dart';
-import 'package:abovhack/Education/widgets/new_trade_chart.dart';
+import 'package:abovhack/Education/widgets/trade_chart.dart';
 import 'package:csv/csv.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:syncfusion_flutter_charts/charts.dart';
 
 enum ChartInterval { fiveMin, day, week, month }
 
@@ -15,7 +14,6 @@ class TradePage extends StatefulWidget {
 
 class _TradePageState extends State<TradePage> {
   late ChartInterval _selectedInterval;
-  late List<ChartSampleData> _chartData;
 
   late List<Stock> stocks = [
     Stock(name: 'IBM', icon: Icons.computer, price: 150.25),
@@ -80,19 +78,18 @@ class _TradePageState extends State<TradePage> {
               },
             ),
           ),
-          const SizedBox(height: 10),
           Expanded(
             child: Container(
               color: Colors.grey[300],
               child: FutureBuilder<List<ChartSampleData>>(
-                future: _loadChartData(), // Load chart data
+                future: _loadChartData(),
                 builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
-                    return Center(child: CircularProgressIndicator());
+                    return const Center(child: CircularProgressIndicator());
                   } else if (snapshot.hasError) {
-                    return Center(child: Text('Error loading data'));
+                    return const Center(child: Text('Error loading data'));
                   } else {
-                    return NewTradeChart(chartData: snapshot.data!);
+                    return TradeChart(chartData: snapshot.data!);
                   }
                 },
               ),
@@ -173,7 +170,7 @@ class _TradePageState extends State<TradePage> {
     final String csvString =
         await DefaultAssetBundle.of(context).loadString('assets/$csvFileName');
 
-    List<List<dynamic>> csvData = CsvToListConverter().convert(csvString);
+    List<List<dynamic>> csvData = const CsvToListConverter().convert(csvString);
 
     csvData.removeAt(0);
 

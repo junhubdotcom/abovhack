@@ -2,21 +2,25 @@ import 'package:abovhack/Education/models/chart_data.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:intl/intl.dart';
+import 'dart:math';
 
-class NewTradeChart extends StatefulWidget {
-  const NewTradeChart({Key? key, required this.chartData}) : super(key: key);
+class TradeChart extends StatefulWidget {
+  const TradeChart({Key? key, required this.chartData}) : super(key: key);
 
   final List<ChartSampleData> chartData;
 
   @override
-  _NewTradeChartState createState() => _NewTradeChartState();
+  _TradeChartState createState() => _TradeChartState();
 }
 
-class _NewTradeChartState extends State<NewTradeChart> {
+class _TradeChartState extends State<TradeChart> {
   late List<ChartSampleData> _chartData;
+  late double _minX;
+  late double _maxX;
+  late double _minY;
+  late double _maxY;
   late TrackballBehavior _trackballBehavior;
-  late double _minPrice;
-  late double _maxPrice;
+  late ZoomPanBehavior _zoomPanBehavior;
 
   @override
   void initState() {
@@ -24,24 +28,25 @@ class _NewTradeChartState extends State<NewTradeChart> {
       enable: true,
       activationMode: ActivationMode.singleTap,
     );
-
-    // Assign widget.chartData to _chartData
+    _zoomPanBehavior =
+        ZoomPanBehavior(enablePanning: true, enablePinching: true);
     _chartData = widget.chartData;
-
-    // Calculate min and max prices dynamically
-    _minPrice = _chartData
-        .map((data) => data.low)
-        .where((value) => value != null)
-        .map<double>((value) => value!.toDouble())
-        .reduce((a, b) => (a < b) ? a : b);
-
-    _maxPrice = _chartData
-        .map((data) => data.high)
-        .where((value) => value != null)
-        .map<double>((value) => value!.toDouble())
-        .reduce((a, b) => (a > b) ? a : b);
-
+    _calculateMinMaxValues();
     super.initState();
+  }
+
+  void _calculateMinMaxValues() {
+    _minX = _chartData
+        .map((data) => data.x!.millisecondsSinceEpoch)
+        .reduce(min)
+        .toDouble();
+    _maxX = _chartData
+        .map((data) => data.x!.millisecondsSinceEpoch)
+        .reduce(max)
+        .toDouble();
+    _minY = _chartData.map((data) => data.low!).whereType<double>().reduce(min);
+    _maxY =
+        _chartData.map((data) => data.high!).whereType<double>().reduce(max);
   }
 
   @override
@@ -51,10 +56,11 @@ class _NewTradeChartState extends State<NewTradeChart> {
         body: SfCartesianChart(
           legend: Legend(isVisible: true),
           trackballBehavior: _trackballBehavior,
+          zoomPanBehavior: _zoomPanBehavior,
           series: <CandleSeries>[
             CandleSeries<ChartSampleData, DateTime>(
               dataSource: _chartData,
-              name: 'AAPL',
+              name: 'IBM',
               xValueMapper: (ChartSampleData sales, _) => sales.x,
               lowValueMapper: (ChartSampleData sales, _) => sales.low,
               highValueMapper: (ChartSampleData sales, _) => sales.high,
@@ -63,13 +69,12 @@ class _NewTradeChartState extends State<NewTradeChart> {
             ),
           ],
           primaryXAxis: DateTimeAxis(
-            dateFormat: DateFormat.MMM(),
+            intervalType: DateTimeIntervalType.auto,
             majorGridLines: MajorGridLines(width: 0),
           ),
           primaryYAxis: NumericAxis(
-            minimum: _minPrice - 5, // Add a padding to the minimum value
-            maximum: _maxPrice + 5, // Add a padding to the maximum value
-            interval: 10,
+            minimum: _minY - 5,
+            maximum: _maxY + 5,
             numberFormat: NumberFormat.simpleCurrency(decimalDigits: 0),
           ),
         ),
