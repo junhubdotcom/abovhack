@@ -9,12 +9,7 @@ class PostingPage extends StatefulWidget {
 }
 
 class _PostingPageState extends State<PostingPage> {
-  final postToList = [
-    'Public',
-    'Savings Squad',
-    'Financial Wizard',
-    'Money Master'
-  ];
+  final postToList = ['Public', 'InvestPro', 'Saving Squad', 'Budget Genius'];
 
   final postLabel = [
     'Financial Concept',
