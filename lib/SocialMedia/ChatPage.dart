@@ -13,87 +13,12 @@ class ChatPage extends StatelessWidget {
           icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () => Navigator.of(context).pop(),
         ),
-      ),
-      /*appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.search, size: 35.0, color: Color(0XFFFF9973)),
-          onPressed: () {},
+        title: Text(
+          "Chat",
+          style: TextStyle(
+              fontWeight: FontWeight.bold, color: Colors.white, fontSize: 25.0),
         ),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.add, size: 35.0, color: Color(0XFFFF9973)),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: ((context) => PostingPage())),
-              );
-            },
-          ),
-          IconButton(
-            icon: Icon(Icons.article, size: 35.0, color: Color(0XFFFF9973)),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: ((context) => SocialMediaHomePage())),
-              );
-            },
-          ),
-          IconButton(
-            icon: Icon(Icons.people, size: 35.0, color: Color(0XFFFF9973)),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: ((context) => CommunityPage())),
-              );
-            },
-          ),
-          IconButton(
-            icon: Icon(Icons.chat, size: 35.0, color: Color(0XFFC4B2AE)),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: ((context) => ChatPage())),
-              );
-            },
-          ),
-          IconButton(
-            icon: Icon(Icons.video_collection,
-                size: 35.0, color: Color(0XFFFF9973)),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: ((context) => ShortVideoPage())),
-              );
-            },
-          ),
-          GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: ((context) => ProfilePage())),
-              );
-            },
-            child: Stack(
-              children: [
-                CircleAvatar(
-                  backgroundImage: NetworkImage(
-                      'https://storage.googleapis.com/pai-images/58286c435ac54f078f246c3e9cc14c1d.jpeg'),
-                  radius: 23.0,
-                ),
-                Positioned(
-                  left: 3.0,
-                  bottom: 0.0,
-                  child: CircleAvatar(
-                    backgroundColor: Colors.green,
-                    radius: 6.0,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),*/
+      ),
       body: Container(
         decoration: const BoxDecoration(color: Color(0XFFFFF3F3)),
         child: Padding(
@@ -197,7 +122,8 @@ class ChatPage extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: ((context) => const ChatDetailsPage())),
+                    MaterialPageRoute(
+                        builder: ((context) => const ChatDetailsPage())),
                   );
                 },
               ),

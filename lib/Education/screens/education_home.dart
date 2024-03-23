@@ -25,9 +25,13 @@ class _EducationHomeState extends State<EducationHome> {
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
-            ProfileSection(
-              xp: xp,
-              maxXp: maxXp,
+            Container(
+              color: Color(0xffff9973),
+              padding: EdgeInsets.symmetric(vertical: 15.0),
+              child: ProfileSection(
+                xp: xp,
+                maxXp: maxXp,
+              ),
             ),
             const Padding(
               padding: EdgeInsets.all(20),
@@ -82,7 +86,7 @@ class ProfileSection extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
-                        color: Colors.black),
+                        color: Colors.white),
                   ),
                   const SizedBox(
                     height: 10,
@@ -93,7 +97,7 @@ class ProfileSection extends StatelessWidget {
                         'Level 1: ',
                         style: TextStyle(
                             fontSize: 16,
-                            color: Colors.black,
+                            color: Colors.white,
                             fontWeight: FontWeight.w700),
                       ),
                       Expanded(
@@ -117,14 +121,14 @@ class ProfileSection extends StatelessWidget {
                         '${xp.toInt()}/',
                         style: const TextStyle(
                             fontSize: 12,
-                            color: Colors.black,
+                            color: Colors.white,
                             fontWeight: FontWeight.w700),
                       ),
                       Text(
                         '${maxXp.toInt()}',
                         style: const TextStyle(
                           fontSize: 12,
-                          color: Colors.black,
+                          color: Colors.white,
                           fontWeight: FontWeight.w700,
                         ),
                       ),

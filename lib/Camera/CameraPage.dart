@@ -41,15 +41,17 @@ class _MainScreenState extends State<MainScreen> with WidgetsBindingObserver {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addObserver(this);
+    WidgetsBinding.instance.addObserver(this); //observe life cycle of the page
 
-    _future = _requestCameraPermission();
+    _future =
+        _requestCameraPermission(); //check whether the camera is granted permission or not
   }
 
   // We should stop the camera once this widget is disposed
   @override
   void dispose() {
-    WidgetsBinding.instance.removeObserver(this);
+    WidgetsBinding.instance
+        .removeObserver(this); // remove the observe of life cycle of the page
     _stopCamera();
     textRecognizer.close();
     super.dispose();
@@ -77,6 +79,7 @@ class _MainScreenState extends State<MainScreen> with WidgetsBindingObserver {
       future: _future,
       builder: (context, snapshot) {
         return Stack(
+          fit: StackFit.expand,
           children: [
             // Show the camera feed behind everything
             if (_isPermissionGranted)
@@ -86,42 +89,46 @@ class _MainScreenState extends State<MainScreen> with WidgetsBindingObserver {
                   if (snapshot.hasData) {
                     _initCameraController(snapshot.data!);
 
-                    return Center(child: CameraPreview(_cameraController!));
+                    return Container(child: CameraPreview(_cameraController!));
                   } else {
                     return const LinearProgressIndicator();
                   }
                 },
               ),
 
-            Scaffold(
-              // Set the background to transparent so you can see the camera preview
-              backgroundColor: _isPermissionGranted ? Colors.transparent : null,
-              body: _isPermissionGranted
-                  ? Column(
-                      children: [
-                        Expanded(
-                          child: Container(),
-                        ),
-                        Container(
-                          padding: const EdgeInsets.only(bottom: 30.0),
-                          child: Center(
-                            child: ElevatedButton(
-                              child: Text('Scan text'),
-                              onPressed: _scanImage,
+            Container(
+              child: Scaffold(
+                // Set the background to transparent so you can see the camera preview
+                backgroundColor:
+                    _isPermissionGranted ? Colors.transparent : null,
+                body: _isPermissionGranted
+                    ? Column(
+                        children: [
+                          Expanded(
+                            child: Container(),
+                          ),
+                          Container(
+                            padding: const EdgeInsets.only(bottom: 30.0),
+                            child: Center(
+                              child: ElevatedButton(
+                                child: Text('Scan text'),
+                                onPressed: _scanImage,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
-                    )
-                  : Center(
-                      child: Container(
-                        padding: const EdgeInsets.only(left: 24.0, right: 24.0),
-                        child: const Text(
-                          'Camera permission denied',
-                          textAlign: TextAlign.center,
+                        ],
+                      )
+                    : Center(
+                        child: Container(
+                          padding:
+                              const EdgeInsets.only(left: 24.0, right: 24.0),
+                          child: const Text(
+                            'Camera permission denied',
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ),
-                    ),
+              ),
             ),
           ],
         );
