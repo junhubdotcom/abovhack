@@ -34,6 +34,7 @@ class _ShortVideoPageState extends State<ShortVideoPage> {
       _initializeVideoPlayerFuture2 = _controller2.initialize(),
       _initializeVideoPlayerFuture3 = _controller3.initialize(),
     ];
+    _controller1.play();
     _controller1.setLooping(true);
     _controller2.setLooping(true);
     _controller3.setLooping(true);
@@ -230,7 +231,9 @@ class _ShortVideoPageState extends State<ShortVideoPage> {
                   );
                 },
                 itemCount: 3,
-                scrollDirection: Axis.vertical),
+                scrollDirection: Axis.vertical,
+                onIndexChanged: (value) => controller[value].play()
+            ),
           ],
         ),
       ),
