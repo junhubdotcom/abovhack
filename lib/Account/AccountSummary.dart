@@ -11,6 +11,7 @@ class AccountSummaryState extends State<AccountSummary> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0XFFFFF3F3),
       body: Column(
         children: [
           Expanded(
@@ -55,7 +56,7 @@ class AccountSummaryState extends State<AccountSummary> {
                                         decoration: BoxDecoration(
                                           borderRadius:
                                               BorderRadius.circular(10),
-                                          color: const Color(0XFFFFF3F3),
+                                          color: const Color(0XFFFFFFFF),
                                         ),
                                         child: const Column(
                                           mainAxisAlignment:
@@ -152,7 +153,7 @@ class AccountSummaryState extends State<AccountSummary> {
                                         decoration: BoxDecoration(
                                           borderRadius:
                                               BorderRadius.circular(10),
-                                          color: const Color(0XFFFFF3F3),
+                                          color: const Color(0XFFFFFFFF),
                                         ),
                                         child: const Column(
                                           mainAxisAlignment:
@@ -193,7 +194,7 @@ class AccountSummaryState extends State<AccountSummary> {
                           child: Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                color: const Color(0XFFFFF3F3),
+                                color: const Color(0XFFFFFFFF),
                               ),
                               child: const Padding(
                                   padding: EdgeInsets.only(
@@ -233,7 +234,7 @@ class AccountSummaryState extends State<AccountSummary> {
                           child: Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                color: const Color(0XFFFFF3F3),
+                                color: const Color(0XFFFFFFFF),
                               ),
                               child: const Padding(
                                   padding: EdgeInsets.only(
@@ -273,7 +274,7 @@ class AccountSummaryState extends State<AccountSummary> {
                           child: Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                color: const Color(0XFFFFF3F3),
+                                color: const Color(0XFFFFFFFF),
                               ),
                               child: const Padding(
                                   padding: EdgeInsets.only(
@@ -313,7 +314,7 @@ class AccountSummaryState extends State<AccountSummary> {
                           child: Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                color: const Color(0XFFFFF3F3),
+                                color: const Color(0XFFFFFFFF),
                               ),
                               child: const Padding(
                                   padding: EdgeInsets.only(
