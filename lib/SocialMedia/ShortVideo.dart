@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:card_swiper/card_swiper.dart';
+import 'package:chewie/chewie.dart';
+import 'package:video_player/video_player.dart';
 
 class ShortVideoPage extends StatefulWidget {
   const ShortVideoPage({super.key});
@@ -9,6 +11,9 @@ class ShortVideoPage extends StatefulWidget {
 }
 
 class _ShortVideoPageState extends State<ShortVideoPage> {
+  // VideoPlayerController _videoPlayerController;
+  // ChewieController _chewieController ;
+
   List<String> listOfVideos = [
     'https://i.ytimg.com/vi/TOsOR48dQ78/maxres2.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AYwCgALgA4oCDAgAEAEYKyA8KH8wDw==&rs=AOn4CLD82RZr0Ib7g7RlEOMSkwgkJKigEA',
     'https://media.istockphoto.com/id/1319103417/photo/inspired-female-teacher-in-headphones-meet-students-online-give-class.jpg?s=612x612&w=0&k=20&c=cSGIQIwPFpVi7m4MR2_SLlwDcpBELdnNnLNgdtH6Bak=',
