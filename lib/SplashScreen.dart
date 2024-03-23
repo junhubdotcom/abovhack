@@ -39,7 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0XFFFFF3F3),
+      backgroundColor: Colors.white,
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -53,7 +53,7 @@ class _SplashScreenState extends State<SplashScreen> {
             const Padding(
               padding: EdgeInsets.only(left: 8.0, right: 8.0, top: 20.0), 
               child: CircularProgressIndicator(
-                backgroundColor: Colors.white,
+                backgroundColor: Color(0XFFC4B2AE),
               ),
             )
           ],
