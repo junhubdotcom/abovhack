@@ -1,3 +1,5 @@
+import 'package:abovhack/SocialMedia/InterestsPage.dart';
+import 'package:abovhack/SplashScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:abovhack/HomePage.dart';
 
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'Financial Literacy App',
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: SplashScreen(),
     );
   }
 }

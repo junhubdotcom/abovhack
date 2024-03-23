@@ -24,7 +24,6 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
-  
   bool _isFirst = true;
   bool isFirstView = true;
 
@@ -36,22 +35,22 @@ class HomePageState extends State<HomePage> {
     const EducationHome(),
   ];
 
-  void initState() {
-    super.initState();
-    checkFirstView();
-  }
+  // void initState() {
+  //   super.initState();
+  //   checkFirstView();
+  // }
 
-  Future<void> checkFirstView() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    bool isFirstView = prefs.getBool('isFirstView') ?? true;
-    if (isFirstView) {
-      setState(() {
-        _selectedIndex =
-            0; // Change to the index of the page you want to show initially
-      });
-      await prefs.setBool('isFirstView', false); // Correct the parameter here
-    }
-  }
+  // Future<void> checkFirstView() async {
+  //   SharedPreferences prefs = await SharedPreferences.getInstance();
+  //   bool isFirstView = prefs.getBool('isFirstView') ?? true;
+  //   if (isFirstView) {
+  //     setState(() {
+  //       _selectedIndex =
+  //           0; // Change to the index of the page you want to show initially
+  //     });
+  //     await prefs.setBool('isFirstView', false); // Correct the parameter here
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -223,15 +222,13 @@ class HomePageState extends State<HomePage> {
   Widget? _buildBodyWidget(int index) {
     switch (index) {
       case 0:
-        return isFirstView
-            ? InterestsPage()
-            : TabBarView(children: [
-                const SocialMediaHomePage(),
-                CommunityPage(),
-                const ShortVideoPage(),
-                const ProfilePage(),
-                const PostingPage(),
-              ]);
+        return TabBarView(children: [
+          const SocialMediaHomePage(),
+          CommunityPage(),
+          const ShortVideoPage(),
+          const ProfilePage(),
+          const PostingPage(),
+        ]);
 
       case 1:
         return const TabBarView(children: [

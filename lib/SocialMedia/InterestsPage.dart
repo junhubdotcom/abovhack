@@ -1,9 +1,44 @@
+import 'package:abovhack/HomePage.dart';
 import 'package:abovhack/SocialMedia/Customise%20Widget/listOfInterest.dart';
 import 'package:abovhack/SocialMedia/SocialMediaHomePage.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:get/get.dart';
 
-class InterestsPage extends StatelessWidget {
+class InterestsPage extends StatefulWidget {
   const InterestsPage({Key? key});
+
+  @override
+  State<InterestsPage> createState() => _InterestsPageState();
+}
+
+class _InterestsPageState extends State<InterestsPage> {
+  late SharedPreferences sharedPreferences;
+  bool isFirstView = false;
+
+  void initState() {
+    super.initState();
+    _loadButtonState();
+  }
+
+  Future<void> _loadButtonState() async {
+    sharedPreferences = await SharedPreferences.getInstance();
+    setState(
+      () {
+        isFirstView = sharedPreferences.getBool('isFirstView') ??
+            false; //if the toggle button method return isFirstView
+      },
+    );
+  }
+
+  Future<void> _toggleButtonState() async {
+    setState(() {
+      isFirstView =
+          !isFirstView; //initially is wrong so when pressed will change to true
+    });
+    await sharedPreferences.setBool(
+        'isFirstView', isFirstView); //set is first view as true
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -185,12 +220,11 @@ class InterestsPage extends StatelessWidget {
                     ),
                     const SizedBox(height: 50),
                     ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushReplacement(
+                      onPressed: () async {
+                        await _toggleButtonState();
+                        Navigator.push(
                           context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  const SocialMediaHomePage()),
+                          MaterialPageRoute(builder: (context) => HomePage()),
                         );
                       },
                       child: const Text(
