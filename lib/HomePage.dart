@@ -21,7 +21,7 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => HomePageState();
 }
 
-class HomePageState extends State<HomePage> with TickerProviderStateMixin{
+class HomePageState extends State<HomePage> with TickerProviderStateMixin {
   late TabController _tabController;
 
   bool _isFirst = true;
@@ -31,7 +31,7 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin{
   final List<Widget> _pages = <Widget>[
     const SocialMediaHomePage(),
     const AccountSummary(),
-    const FinancialCalendarPage(),
+    FinancialCalendarPage(),
     const EducationHome(),
   ];
 
@@ -41,11 +41,11 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin{
     _tabController = TabController(length: 5, vsync: this);
   }
 
- @override
- void dispose() {
-   _tabController.dispose();
-   super.dispose();
- }
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
 
   // void initState() {
   //   super.initState();
@@ -142,7 +142,7 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin{
                 onDestinationSelected: (int index) {
                   setState(() => _selectedIndex = index);
                   _tabController.animateTo(0);
-                  if (index==1 && _isFirst) {
+                  if (index == 1 && _isFirst) {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
