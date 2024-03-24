@@ -133,7 +133,7 @@ class AccountSummaryState extends State<AccountSummary> {
                                                 size: 32),
                                             Text('487 days',
                                                 style: TextStyle(
-                                                    fontSize: 36,
+                                                    fontSize: 28,
                                                     color: Color(0XFF14181B),
                                                     fontWeight:
                                                         FontWeight.w600)),

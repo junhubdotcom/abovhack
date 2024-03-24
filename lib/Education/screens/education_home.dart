@@ -12,8 +12,7 @@ class EducationHome extends StatefulWidget {
 }
 
 class _EducationHomeState extends State<EducationHome> {
-  // Sample XP value
-  double xp = 123;
+  double xp = 323;
   double maxXp = 1234;
 
   @override
@@ -27,7 +26,7 @@ class _EducationHomeState extends State<EducationHome> {
           children: [
             Container(
               color: Color(0xffff9973),
-              padding: EdgeInsets.symmetric(vertical: 15.0),
+              padding: EdgeInsets.symmetric(vertical: 8.0),
               child: ProfileSection(
                 xp: xp,
                 maxXp: maxXp,
@@ -40,6 +39,7 @@ class _EducationHomeState extends State<EducationHome> {
             const Expanded(
               child: LearnSection(),
             ),
+            const SizedBox(height: 10),
           ],
         ),
       ),
@@ -62,14 +62,14 @@ class ProfileSection extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
-            width: 120,
-            height: 120,
+            width: 80,
+            height: 80,
             clipBehavior: Clip.antiAlias,
             decoration: const BoxDecoration(
               shape: BoxShape.circle,
             ),
-            child: Image.network(
-              'https://storage.googleapis.com/pai-images/58286c435ac54f078f246c3e9cc14c1d.jpeg',
+            child: Image.asset(
+              'images/profile.jpeg',
               fit: BoxFit.cover,
             ),
           ),
@@ -84,7 +84,7 @@ class ProfileSection extends StatelessWidget {
                   const Text(
                     'Michelle Teoh',
                     style: TextStyle(
-                        fontSize: 25,
+                        fontSize: 20,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
                   ),
@@ -175,12 +175,12 @@ class TradeCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
         ),
         child: const Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
+          padding: EdgeInsetsDirectional.only(bottom: 8),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 12, 0),
+                padding: EdgeInsetsDirectional.only(end: 12),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -201,7 +201,7 @@ class TradeCard extends StatelessWidget {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
+                            padding: EdgeInsetsDirectional.only(top: 4),
                             child: Text(
                               'Learn trading by trading',
                               style: TextStyle(
@@ -238,13 +238,13 @@ class TradeCard extends StatelessWidget {
                             '4',
                             style: TextStyle(
                               fontFamily: 'Outfit',
-                              color: Colors.deepOrange, //0xFF14181B
+                              color: Colors.deepOrange,
                               fontSize: 24,
                               fontWeight: FontWeight.w600,
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
+                            padding: EdgeInsetsDirectional.only(top: 4),
                             child: Text(
                               'Open Trade',
                               style: TextStyle(
@@ -261,7 +261,7 @@ class TradeCard extends StatelessWidget {
                   ),
                   Expanded(
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 16, 0),
+                      padding: EdgeInsetsDirectional.only(end: 16),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -276,7 +276,7 @@ class TradeCard extends StatelessWidget {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
+                            padding: EdgeInsetsDirectional.only(top: 4),
                             child: Text(
                               'Portfolio Value',
                               style: TextStyle(
